@@ -1,0 +1,25 @@
+@import url('colors.css');
+@import url('fonts.css');
+
+body {
+    font-family: 'RobotoSlab';
+}
+header {
+    background-color: var(--deep-black);
+    padding: 15px 0;
+}
+.ask__btn {
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--deep-red), var(--deep-red) 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+.ask__btn:hover {
+    background-position: 0 100%;
+}
