@@ -15,6 +15,7 @@
 *.tar
 *.bak
 *.old
+!robots.txt
 
 #битрикс
 *.htaccess
