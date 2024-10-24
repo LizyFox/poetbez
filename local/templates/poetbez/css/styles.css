@@ -4,16 +4,15 @@
 
 body {
     font-family: 'RobotoSlab';
+    color: #fff;
 }
 .overhead {
-    height: 115px;
+    height: 80px;
     background-color: var(--light-black);
 }
 .header__block {
     background-color: var(--deep-black);
     padding: 15px 0;
-    /* position: relative; */
-
     position: fixed;
     width: 100%;
     height: fit-content;
@@ -31,7 +30,6 @@ body {
     background-position: 100%;
     transition: background-position 275ms ease;
         width: fit-content;
-    margin: 0 auto;
     padding: 7px 15px;
     border-radius: 50px;
     border: 2px solid var(--deep-red);
@@ -40,8 +38,8 @@ body {
     background-position: 0 100%;
 }
 .logo__img {
-    max-width: 95px;
-    max-height: 85px;
+    max-width: 50px;
+    max-height: 50px;
     object-fit: contain;
 }
 .socseti__block a {
@@ -66,14 +64,14 @@ main {
     background-color: var(--light-black);
     position: relative;
     z-index: 9;
-    padding-bottom: 300px;
+    padding-bottom: 400px;
 }
-/* .under-footer_bg {
+.under-footer_bg {
     background-image: url(/local/templates/poetbez/images/underfooter_bg.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 500px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -82,14 +80,40 @@ main {
 }
 .under-footer_bg img {
     width: 100%;
-    height: 60%;
+    height: 55%;
     object-fit: cover;
-    object-position: top;
+    object-position: top left;
     position: absolute;
     bottom: 0;
     z-index: -1;
-} */
-
+}
+footer {
+    background-color: var(--deep-black);
+    padding: 25px 0;
+}
+.footer__bottom-block {
+    margin-top: 15px;
+}
+.footer__bottom-block a, .footer__bottom-block span, .copyright {
+    color: var(--grey);
+    font-size: 16px;
+}
+.footer__bottom-block a {
+    text-decoration: none;
+}
+.footer__bottom-block a:hover {
+    color: var(--deep-red);
+    position: relative;
+}
+.footer__bottom-block a:hover::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--deep-red);
+}
 
 @media (max-width: 1199px) {
     
@@ -101,12 +125,24 @@ main {
 }
 @media (max-width: 767px) {
     .overhead {
-        height: 85px;
+        height: 70px;
     }
     .header__block {
-        padding: 0;
+        padding: 10px 0;
     }
     .breadcrumb__block {
         padding: 20px 0;
+    }
+    .ask__btn {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 575px) {
+    footer {
+        padding: 15px 0;
+    }
+    footer .logo__img {
+        max-height: 65px;
+        max-width: 65px;
     }
 }

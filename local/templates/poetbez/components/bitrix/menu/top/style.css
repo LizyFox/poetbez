@@ -108,7 +108,7 @@ button:focus:not(:focus-visible) {
 @media (max-width: 767px) {
     .top-menu__block {
         position: absolute;
-        top: 81%;
+        top: 85%;
         left: 0px;
         right: 0px;
         background-color: var(--deep-black);

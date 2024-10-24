@@ -1,22 +1,22 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Карта сайта", 
-		"search/map.php", 
+		"Мероприятия", 
+		"events/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контакты", 
-		"contacts/", 
+		"Авторы", 
+		"authors/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Вход на сайт", 
-		"auth.php", 
+		"Мерч", 
+		"merch/", 
 		Array(), 
 		Array(), 
 		"" 

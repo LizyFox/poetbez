@@ -48,9 +48,9 @@ IncludeTemplateLangFile(__FILE__);
 		<meta itemprop="description" content="<?$APPLICATION->ShowProperty("description")?>">
 
 		<div class="header__block">
-			<div class="container-lg ps-2">
+			<div class="container-lg">
 				<div class="row">
-					<div class="col-6 col-md-2">
+					<div class="col-6 col-md-1 col-lg-2">
 						<div class="logo__block w-100 h-100">
 							<?$APPLICATION->IncludeFile(
 								SITE_DIR."include/logo.php",
@@ -59,7 +59,7 @@ IncludeTemplateLangFile(__FILE__);
 							);?>
 						</div>
 					</div>
-					<div class="col-6 col-md-7 order-3 order-md-2 d-flex d-md-block align-items-center justify-content-end">
+					<div class="col-6 col-md-8 col-lg-7 order-3 order-md-2 d-flex d-md-block align-items-center justify-content-end">
 						<div class="d-md-none">
 							<div class="container-fluid justify-content-end">
 								<button data-mdb-button-init class="navbar-toggler toggler-button" type="button" data-mdb-collapse-init
