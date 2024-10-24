@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поэтический БеЗпредел");
-$APPLICATION->SetPageProperty("description", "ПЕ@учий случай");
+$APPLICATION->SetPageProperty("description", "Е@учий случай");
 ?>
 <?/*$APPLICATION->IncludeComponent(
 	"bitrix:news.list",

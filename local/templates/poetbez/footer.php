@@ -1,4 +1,28 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+		<div class="under-footer_bg">
+			<!-- <img src="<?=SITE_TEMPLATE_PATH?>/images/underfooter__city.png" alt="DoomerTown"> -->
+		</div>
+	</main>
+	<footer>
+
+	</footer>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						<?/*	</div>
 						</div>
 					</div>
