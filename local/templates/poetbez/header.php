@@ -94,90 +94,42 @@ IncludeTemplateLangFile(__FILE__);
 			</div>
 		</div>
 		<div class="overhead"></div>
-		<div class="breadcrumb__block">
-			<div class="container-lg">
-				<div class="row">
-					<div class="col-12">
-						<?if ($APPLICATION->GetCurPage(false) != "/"):?>
-							<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
-								"START_FROM" => "1",
-								"PATH" => "",
-								"SITE_ID" => SITE_ID
-								),
-								false
-							);?>
-						<?endif;?>
+		<?if ($APPLICATION->GetCurPage(false) != "/"):?>
+			<div class="breadcrumb__block">
+				<div class="container-lg">
+					<div class="row">
+						<div class="col-12">
+								<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
+									"START_FROM" => "1",
+									"PATH" => "",
+									"SITE_ID" => SITE_ID
+									),
+									false
+								);?>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		<?endif;?>
 	</header>
 	<main>
 
 
-
-
-
-	
-
-
-
-
-
 	<?/*
-	<div id="page-wrapper">
-		<div id="content-wrapper">
-			<div id="content">
-			<?if($APPLICATION->GetCurPage(false)==SITE_DIR):?>
-				<div id="banner">
-					<div id="banner-image"><?$APPLICATION->IncludeFile(
-								SITE_DIR."include/banner.php",
-								Array(),
-								Array("MODE"=>"html")
-							);?></div>
-					<table cellspacing="0" id="banner-text">
-						<tr>
-							<td width="35%">&nbsp;</td>
-							<td>
-							<?$APPLICATION->IncludeFile(
-								SITE_DIR."include/banner_text.php",
-								Array(),
-								Array("MODE"=>"text")
-							);?>
-							</td>
-						</tr>
-					</table>
-					<div id="banner-overlay"></div>
-				</div>
-			<?else:?>
-				<div id="breadcrumb">
-					<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
-						"START_FROM" => "1",
-						"PATH" => "",
-						"SITE_ID" => SITE_ID
-						),
-						false
-					);?>
-				</div>					
-			<?endif?>					
-				<div id="workarea-wrapper">
-					<div id="left-menu">
-					<?$APPLICATION->IncludeComponent("bitrix:menu", "tree", array(
-						"ROOT_MENU_TYPE" => "leftfirst",
-						"MENU_CACHE_TYPE" => "Y",
-						"MENU_CACHE_TIME" => "36000000",
-						"MENU_CACHE_USE_GROUPS" => "Y",
-						"MENU_CACHE_GET_VARS" => array(
-						),
-						"MAX_LEVEL" => "4",
-						"CHILD_MENU_TYPE" => "left",
-						"USE_EXT" => "N",
-						"ALLOW_MULTI_SELECT" => "N"
-						),
-						false
-					);?>
-					</div>						
-					<div id="workarea">
-						<div id="workarea-inner">
-						<h5><?$APPLICATION->ShowTitle(false);?></h5> 
+	<?$APPLICATION->IncludeComponent("bitrix:menu", "tree", array(
+		"ROOT_MENU_TYPE" => "leftfirst",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "4",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+		),
+		false
+	);?>
+					
+	<h5><?$APPLICATION->ShowTitle(false);?></h5> 
 	*/?>

@@ -23,3 +23,10 @@
     src: url("../fonts/RobotoSlab/RobotoSlab-Bold.ttf") format("truetype");
     font-weight: 700;
 }
+
+
+@font-face {
+    font-family: "Moniqa";
+    src: url("../fonts/Moniqa/Moniqa-MediumItalicHeading.ttf") format("truetype");
+    font-weight: 400;
+}
