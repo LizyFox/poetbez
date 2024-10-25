@@ -1,7 +1,8 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 		<div class="under-footer_bg">
-			<img src="<?=SITE_TEMPLATE_PATH?>/images/underfooter__city.png" alt="DoomerTown">
+			<img src="<?=SITE_TEMPLATE_PATH?>/images/underfooter__city-star.png" alt="DoomerTown">
+			<div class="under-footer_stars"></div>
 		</div>
 	</main>
 	<footer itemscope itemtype="http://schema.org/WPFooter">

@@ -68,17 +68,29 @@ $APPLICATION->SetPageProperty("h1", "Культурное мероприятие
 
     <div class="main-info__block">
         <div class="row">
-            <div class="col-7">
-
-            </div>
-            <div class="col-5">
-
-            </div>
-            <div class="col-5">
-
-            </div>
-            <div class="col-7">
+            <div class="col-12 col-lg-7 order-4 order-lg-0">
                 
+            </div>
+            <div class="col-12 col-lg-5 mb-4">
+                <?$APPLICATION->IncludeFile(
+                    SITE_DIR."include/main-top-right-text.php",
+                    Array(),
+                    Array("MODE"=>"html")
+                );?>
+            </div>
+            <div class="col-12 col-lg-5 mb-4">
+                <?$APPLICATION->IncludeFile(
+                    SITE_DIR."include/main-bottom-left-text.php",
+                    Array(),
+                    Array("MODE"=>"html")
+                );?>
+            </div>
+            <div class="col-12 col-lg-7">
+                <?$APPLICATION->IncludeFile(
+                    SITE_DIR."include/main-bottom-right-text.php",
+                    Array(),
+                    Array("MODE"=>"html")
+                );?>
             </div>
         </div>
     </div>
