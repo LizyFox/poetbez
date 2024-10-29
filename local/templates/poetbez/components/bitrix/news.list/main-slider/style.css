@@ -1,0 +1,124 @@
+.main-slider__block {
+	height: 350px;
+	position: relative;
+	z-index: 1;
+}
+.main-slider__img img {
+	object-fit: cover;
+}
+.main-slider__block .owl-nav, .main-slider__block .owl-dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: flex;
+}
+.main-slider__block .owl-nav {
+	top: 50%;
+    transform: translateY(-50%);
+	z-index: 9;
+	justify-content: space-between;
+}
+.main-slider__block .owl-nav button {
+	background: unset;
+    outline: unset;
+    border: unset;
+}
+.main-slider__block .owl-nav button span {
+	font-size: 60px;
+    color: #fff;
+    font-weight: lighter;
+	opacity: 0.75;
+	transition: all 0.1s ease-out;
+}
+.main-slider__block .owl-nav button:hover span {
+	font-size: 75px;
+	opacity: 1;
+    color: var(--deep-red);
+}
+.main-slider__block .owl-dots {
+	bottom: 10px;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+.main-slider__block .owl-dots button {
+	padding: 0;
+	margin: 0 2px;
+	border: 1px solid var(--light-black);
+}
+.main-slider__block .owl-dots span {
+	display: inline-block;
+}
+.main-slider__block .owl-dots button, .main-slider__block .owl-dots span {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+}
+.main-slider__block .owl-dots button.active {
+	background-color: var(--deep-red);
+	border-color: #620c00;
+	height: 12px;
+	width: 12px;
+}
+/* .main-banner__img img {
+	object-fit: cover;
+}
+.main-banner__btn {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	padding: 15px 20px;
+	border-radius: 50px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
+.main-banner__btn:before {
+	content: '';
+	width: 100%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	filter: blur;
+	background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+	transform: translate(-100%, -25%) rotate(10deg);
+	animation: blick 4s infinite;
+}
+  
+@keyframes blick {
+	0% {
+	  transform: translate(-100%, -25%) rotate(10deg);
+	}
+	20% {
+	  transform: translate(100%, -25%) rotate(10deg);
+	}
+	100% {
+	  transform: translate(100%, -25%) rotate(10deg);
+	}
+}
+
+.main-banner__btn a {
+	text-decoration: none;
+	font-size: 20px;
+}
+
+@media (max-width: 991px) {
+	.main-banner__block {
+		height: 350px;
+	}
+	.main-banner__btn {
+		bottom: 25px;
+		padding: 10px 15px;
+	}
+	.main-banner__btn a {
+		font-size: 18px;
+	}
+}
+@media (max-width: 575px) {
+	.main-banner__btn a {
+		font-size: 16px;
+	}
+} */
