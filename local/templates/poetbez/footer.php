@@ -8,7 +8,7 @@
 	<footer itemscope itemtype="http://schema.org/WPFooter">
 		<div class="container-lg">
 			<div class="row">
-				<div class="col-12 col-sm-2 col-md-1 order-1">
+				<div class="col-12 col-sm-1 order-1">
 					<div class="logo__block w-100 h-100 text-center text-sm-start mb-3 mb-sm-0">
 						<?$APPLICATION->IncludeFile(
 							SITE_DIR."include/logo.php",
@@ -17,7 +17,7 @@
 						);?>
 					</div>
 				</div>
-				<div class="col-12 col-sm-3 col-md-2 order-4 order-sm-2">
+				<div class="col-12 col-sm-4 col-md-3 col-xl-2 order-4 order-sm-2">
 					<div class="socseti__block text-center text-sm-start mt-2 mt-sm-0">
 						<?$APPLICATION->IncludeFile(
 							SITE_DIR."include/telegram.php",
@@ -29,9 +29,14 @@
 							Array(),
 							Array("MODE"=>"html")
 						);?>
+						<?$APPLICATION->IncludeFile(
+							SITE_DIR."include/email.php",
+							Array(),
+							Array("MODE"=>"html")
+						);?>
 					</div>
 				</div>
-				<div class="col-12 col-sm-4 col-lg-3 col-xl-2 order-2 order-sm-3">
+				<div class="col-12 col-sm-4 col-md-3 col-xl-2 order-2 order-sm-3">
 					<div class="bottom-menu__block">
 						<?$APPLICATION->IncludeComponent("bitrix:menu", "bottom", array(
 							"ROOT_MENU_TYPE" => "bottom1",

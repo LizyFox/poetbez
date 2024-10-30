@@ -31,7 +31,12 @@
 		Array(),
 		Array("MODE"=>"html")
 	);?>
+	<?$APPLICATION->IncludeFile(
+		SITE_DIR."include/email.php",
+		Array(),
+		Array("MODE"=>"html")
+	);?>
 </div>
 <div class="mobile-ask__btn d-md-none">
-	<p class="ask__btn text-center"><?=GetMessage("HEADER_ASK")?></p>
+	<p class="button ask__btn text-center"><?=GetMessage("HEADER_ASK")?></p>
 </div>

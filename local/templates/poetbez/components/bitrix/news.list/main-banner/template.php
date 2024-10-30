@@ -33,7 +33,7 @@ $current_date = strtotime(date('Y-m-d H:i:s'));
 			<?endif;?>
 		</div>
 		<div class="main-banner__btn" style="background-color: <?=$arItem['PROPERTIES']['BG_BUTTON']['VALUE'];?>;">
-			<a href="<?=$arItem['PROPERTIES']['LINK_BTN']['VALUE'];?>" style="color: <?=$arItem['PROPERTIES']['COLOR_BTN']['VALUE'];?>;" title="<?=GetMessage('ALL_EVENTS');?>">
+			<a href="<?=$arItem['PROPERTIES']['LINK_BTN']['VALUE'];?>" style="color: <?=$arItem['PROPERTIES']['COLOR_BTN']['VALUE'];?>;" title="<?=GetMessage('ALL_EVENTS');?>" class="button">
 				<?=$arItem['PROPERTIES']['TEXT_BTN']['VALUE'];?>
 			</a>
 		</div>

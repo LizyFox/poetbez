@@ -1,32 +1,56 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Контактная информация");
+$APPLICATION->SetPageProperty("description", "Е@учий случай");
 $APPLICATION->SetPageProperty("h1", "Контактная информация");
-
 ?>
+
 <div class="container-lg">
-  <h1 class="h1"><?$APPLICATION->ShowProperty('h1')?></h1>
+    <h1 class="h1"><?$APPLICATION->ShowProperty('h1')?></h1>
+    <div class="row">
+        <div class="col-12 col-md-7">
+            <?$APPLICATION->IncludeFile(
+                SITE_DIR."include/contacts-text.php",
+                Array(),
+                Array("MODE"=>"html")
+            );?>
+            <div class="contacts-feedback__block mt-4 mt-md-5 mb-4 mb-md-0 d-flex">
+                <p class="button btn_red d-inline-block btn-coop btn_blick mb-0">Сотрудничество</p>
 
-  <p>Обратитесь к нашим специалистам и получите профессиональную консультацию по услугам нашего банка.</p>
+                <?$APPLICATION->IncludeFile(
+                    SITE_DIR."include/telegram.php",
+                    Array(),
+                    Array("MODE"=>"html")
+                );?>
+                <?$APPLICATION->IncludeFile(
+                    SITE_DIR."include/vkontakte.php",
+                    Array(),
+                    Array("MODE"=>"html")
+                );?>
+                <?$APPLICATION->IncludeFile(
+                    SITE_DIR."include/email.php",
+                    Array(),
+                    Array("MODE"=>"html")
+                );?>
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <?$APPLICATION->IncludeFile(
+                SITE_DIR."include/contacts-map.php",
+                Array(),
+                Array("MODE"=>"html")
+            );?>
+        </div>
+    </div>
+    <h2 class="h1">Наши организаторы</h2>
 
-  <p>Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе. Будем рады помочь вам и ответить на все ваши вопросы. </p>
-
-  <h2>Телефоны</h2>
-
-  <ul>
-    <li>Телефон/факс: 
-      <ul>
-        <li><b>(495) 212-85-06</b> </li>
-      </ul>
-    </li>
-
-    <li>Телефоны: 
-      <ul>
-        <li><b>(495) 212-85-07</b> </li>
-      
-        <li><b>(495) 212-85-08</b> </li>
-      </ul>
-    </li>
-  </ul>
+    <div class="col-12 col-md-5">
+        <?$APPLICATION->IncludeFile(
+            SITE_DIR."include/contacts-donat.php",
+            Array(),
+            Array("MODE"=>"html")
+        );?>
+    </div>
 </div>
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

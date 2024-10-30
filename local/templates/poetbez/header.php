@@ -88,7 +88,7 @@ IncludeTemplateLangFile(__FILE__);
 						</div>
 					</div>
 					<div class="col-3 order-2 order-md-3 d-none d-md-flex align-items-center justify-content-end">
-						<p class="ask__btn mb-0"><?=GetMessage("HEADER_ASK")?></p>
+						<p class="button ask__btn mb-0"><?=GetMessage("HEADER_ASK")?></p>
 					</div>
 				</div>
 			</div>

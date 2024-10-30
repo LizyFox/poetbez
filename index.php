@@ -151,17 +151,44 @@ $APPLICATION->SetPageProperty("h1", "Культурное мероприятие
         </div>
     </div>
 </div>
-<div class="main-agents__block py-5">
+<div class="main-text__agents-block py-5">
 	<div class="container-lg">
 		<div class="row">
 			<div class="col-12 col-md-9 col-lg-6 mx-auto">
 				<?$APPLICATION->IncludeFile(
-					SITE_DIR."include/main_agents.php",
+					SITE_DIR."include/main-agents.php",
 					Array(),
 					Array("MODE"=>"html")
 				);?>
+				<div class="text-center mt-4">
+					<a href="/authors/" class="button btn_red d-inline-block btn_blick"><?=GetMessage("MAIN_AGENT_LINK_TEXT")?></a>
+				</div>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="main-agents__block">
+	<div class="container-lg">
+		<h2 class="h1">
+			<a href="/authors/"><?=GetMessage("MAIN_H2_AUTHORS")?></a>
+		</h2>
+
+	</div>
+</div>
+<div class="main-merch__block">
+	<div class="container-lg">
+		<h2 class="h1">
+			<a href="/merch/"><?=GetMessage("MAIN_H2_MERCH")?></a>
+		</h2>
+
+	</div>
+</div>
+<div class="main-news__block">
+	<div class="container-lg">
+		<h2 class="h1">
+			<a href="/news/"><?=GetMessage("MAIN_H2_NEWS")?></a>
+		</h2>
+		
 	</div>
 </div>
 

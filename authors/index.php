@@ -1,8 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Информация о компании");
+$APPLICATION->SetTitle("Поиск");
 ?>
-
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
