@@ -6,17 +6,23 @@ body {
     font-family: 'RobotoSlab';
     color: #fff;
     font-size: 17px;
+    line-height: normal;
 }
 a {
     color: #fff;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: none;
+}
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Moniqa';
     line-height: normal;
+    margin-bottom: 20px;
 }
 .h1 {
     font-size: 64px;
+    margin-bottom: 25px;
 }
 .h2 {
     font-size: 48px;
@@ -41,9 +47,10 @@ a {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.3);
     transform: translateX(-4em) skewX(-45deg);
+    filter: blur(10px);
 }
 .btn_blick:hover:before {
-    animation: moveLight 0.5s;
+    animation: moveLight 0.7s;
 }
 
 @keyframes moveLight {
@@ -253,6 +260,14 @@ footer {
     right: 0;
     height: 2px;
     background-color: var(--deep-red);
+}
+.contacts-donat__block {
+    
+}
+.contacts-donat__text img {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
 }
 
 @media (min-width: 2510px) {

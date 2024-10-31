@@ -7,7 +7,7 @@ $APPLICATION->SetPageProperty("h1", "Контактная информация")
 
 <div class="container-lg">
     <h1 class="h1"><?$APPLICATION->ShowProperty('h1')?></h1>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-12 col-md-7">
             <?$APPLICATION->IncludeFile(
                 SITE_DIR."include/contacts-text.php",
@@ -15,7 +15,7 @@ $APPLICATION->SetPageProperty("h1", "Контактная информация")
                 Array("MODE"=>"html")
             );?>
             <div class="contacts-feedback__block mt-4 mt-md-5 mb-4 mb-md-0 d-flex">
-                <p class="button btn_red d-inline-block btn-coop btn_blick mb-0">Сотрудничество</p>
+                <p class="button btn_red d-inline-block btn-coop btn_blick mb-0">Задать вопрос</p>
 
                 <?$APPLICATION->IncludeFile(
                     SITE_DIR."include/telegram.php",
@@ -43,8 +43,35 @@ $APPLICATION->SetPageProperty("h1", "Контактная информация")
         </div>
     </div>
     <h2 class="h1">Наши организаторы</h2>
-
-    <div class="col-12 col-md-5">
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:catalog.section.list",
+        "contacts-members",
+        Array(
+            "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "N",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO",
+            "COUNT_ELEMENTS" => "N",
+            "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+            "FILTER_NAME" => "sectionsFilter",
+            "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+            "IBLOCK_ID" => "4",
+            "IBLOCK_TYPE" => "members",
+            "SECTION_CODE" => "",
+            "SECTION_FIELDS" => array("", ""),
+            "SECTION_ID" => "",
+            "SECTION_URL" => "",
+            "SECTION_USER_FIELDS" => array("UF_AUTHOR_CITY", "UF_AUTHOR_IS_ADMIN", "UF_AUTHOR_ANONS_TEXT", "UF_AUTHOR_LINK", "UF_AUTHOR_NAME", "UF_AUTHOR_LAST_NAME"),
+            "SHOW_PARENT_NAME" => "Y",
+            "TOP_DEPTH" => "2",
+            "VIEW_MODE" => "LINE"
+        )
+    );?>
+    <div class="col-12 col-md-5 mt-5 pt-5 mx-auto">
         <?$APPLICATION->IncludeFile(
             SITE_DIR."include/contacts-donat.php",
             Array(),
