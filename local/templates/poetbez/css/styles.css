@@ -80,6 +80,24 @@ a:hover {
     font-size: 90px;
     margin: 60px 0;
 }
+.link_hover {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.link_hover:hover {
+    color: var(--deep-red);
+    position: relative;
+}
+.link_hover:hover::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--deep-red);
+}
 .overhead {
     height: 80px;
     background-color: var(--light-black);
@@ -261,14 +279,42 @@ footer {
     height: 2px;
     background-color: var(--deep-red);
 }
-.contacts-donat__block {
-    
-}
 .contacts-donat__text img {
-    max-width: 100px;
+    max-width: 110px;
     height: auto;
     object-fit: contain;
 }
+.authors__img {
+	padding: 12px;
+	background-color: #fff;
+}
+.authors__img img {
+	height: 100%;
+	width: calc(100% - 35px);
+	object-fit: cover;
+}
+.authors__name {
+	width: 35px;
+	display: inline-block;
+	white-space: nowrap;
+	transform: rotate(-90deg);
+}
+.authors__name span {
+	color: var(--deep-red);
+	letter-spacing: -0.8px;
+}
+.authors__fisrt-name {
+	font-family: 'Inter';
+	font-size: 18px;
+	font-weight: 300;
+}
+.authors__last-name {
+	font-family: 'Moniqa';
+	font-size: 35px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
 
 @media (min-width: 2510px) {
     .under-footer_bg img {

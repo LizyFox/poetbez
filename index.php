@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Поэтический БеЗпредел");
+$APPLICATION->SetPageProperty("title", "Поэтический БеЗпредел - Культурное мероприятие нашего города");
 $APPLICATION->SetPageProperty("description", "Е@учий случай");
-$APPLICATION->SetPageProperty("h1", "Культурное мероприятие нашего города");
+$APPLICATION->SetTitle("Культурное мероприятие нашего города");
 ?>
 
 <?$APPLICATION->IncludeComponent(
@@ -64,7 +64,7 @@ $APPLICATION->SetPageProperty("h1", "Культурное мероприятие
 );?>
 
 <div class="container-lg">
-    <h1 class="h1 main__h1"><?$APPLICATION->ShowProperty('h1')?></h1>
+    <h1 class="h1 main__h1"><?$APPLICATION->ShowTitle(false)?></h1>
 
     <div class="main-info__block">
         <div class="row">

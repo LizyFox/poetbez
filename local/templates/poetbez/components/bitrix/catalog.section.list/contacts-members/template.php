@@ -21,22 +21,22 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
 ?>
 
 <?if ($arResult["SECTIONS_COUNT"] > 0):?>
-	<div class="contacts-members__block">
+	<div class="authors__block contacts-members">
 		<div class="row justify-content-center flex-column flex-md-row">
 			<?foreach ($arResult['SECTIONS'] as &$arSection):?>
 				<?if ($arSection['UF_AUTHOR_IS_ADMIN'] == true):?>
 					<div class="col-9 col-sm-8 col-md-4 col-xl-3 mx-auto mx-md-0 text-center text-md-start">
-						<div class="contacts-members__img mx-auto mx-md-0">
+						<div class="authors__img mx-auto mx-md-0">
 							<a href="<?=$arSection['SECTION_PAGE_URL'];?>" class="d-flex align-items-end justify-content-between flex-row-reverse h-100 w-100">
 								<img src="<?=makeWebp(CFile::GetPath($arSection['DETAIL_PICTURE']));?>" alt="<?=$arSection['PICTURE']['ALT'];?>">
-								<div class="contacts-members__name">
-									<span class="contacts-members__fisrt-name"><?=$arSection['UF_AUTHOR_NAME'];?></span> &nbsp;
-									<span class="contacts-members__last-name"><?=$arSection['UF_AUTHOR_LAST_NAME'];?></span>
+								<div class="authors__name">
+									<span class="authors__fisrt-name"><?=$arSection['UF_AUTHOR_NAME'];?></span> &nbsp;
+									<span class="authors__last-name"><?=$arSection['UF_AUTHOR_LAST_NAME'];?></span>
 								</div>
 							</a>
 						</div>
-						<div class="contacts-members__info mt-2 mb-5 mb-md-0">
-							<a href="<?=$arSection['UF_AUTHOR_LINK'];?>" class="link-vk me-3" rel="nofollow" target="_blank">
+						<div class="authors__info mt-2 mb-5 mb-md-0">
+							<a href="<?=$arSection['UF_AUTHOR_LINK_VK'];?>" class="link-vk me-3" rel="nofollow" target="_blank">
 								<img src="<?=SITE_TEMPLATE_PATH?>/images/vkontakte.png" alt="ВКонтакте">
 							</a>
 							<?$APPLICATION->IncludeFile(

@@ -1,12 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Контактная информация");
+$APPLICATION->SetPageProperty("title", "Контактная информация - Поэтический БеЗпредел");
 $APPLICATION->SetPageProperty("description", "Е@учий случай");
-$APPLICATION->SetPageProperty("h1", "Контактная информация");
+$APPLICATION->SetTitle("Контактная информация");
 ?>
 
 <div class="container-lg">
-    <h1 class="h1"><?$APPLICATION->ShowProperty('h1')?></h1>
+    <h1 class="h1"><?$APPLICATION->ShowTitle(false)?></h1>
     <div class="row mb-5">
         <div class="col-12 col-md-7">
             <?$APPLICATION->IncludeFile(
@@ -65,13 +65,13 @@ $APPLICATION->SetPageProperty("h1", "Контактная информация")
             "SECTION_FIELDS" => array("", ""),
             "SECTION_ID" => "",
             "SECTION_URL" => "",
-            "SECTION_USER_FIELDS" => array("UF_AUTHOR_CITY", "UF_AUTHOR_IS_ADMIN", "UF_AUTHOR_ANONS_TEXT", "UF_AUTHOR_LINK", "UF_AUTHOR_NAME", "UF_AUTHOR_LAST_NAME"),
+            "SECTION_USER_FIELDS" => array("UF_AUTHOR_CITY", "UF_AUTHOR_IS_ADMIN", "UF_AUTHOR_ANONS_TEXT", "UF_AUTHOR_LINK_VK", "UF_AUTHOR_NAME", "UF_AUTHOR_LAST_NAME"),
             "SHOW_PARENT_NAME" => "Y",
             "TOP_DEPTH" => "2",
             "VIEW_MODE" => "LINE"
         )
     );?>
-    <div class="col-12 col-md-5 mt-5 pt-5 mx-auto">
+    <div class="col-12 col-sm-7 col-md-7 col-xl-5 pt-0 pt-md-5 mt-0 mt-md-5 mx-auto">
         <?$APPLICATION->IncludeFile(
             SITE_DIR."include/contacts-donat.php",
             Array(),

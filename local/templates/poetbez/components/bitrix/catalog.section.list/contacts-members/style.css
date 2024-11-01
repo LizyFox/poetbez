@@ -1,32 +1,4 @@
-.contacts-members__img {
+.contacts-members .authors__img {
 	max-width: 315px;
 	height: 315px;
-	padding: 12px;
-	background-color: #fff;
-}
-.contacts-members__img img {
-	height: 100%;
-	width: calc(100% - 35px);
-	object-fit: cover;
-}
-.contacts-members__name {
-	width: 35px;
-	display: inline-block;
-	white-space: nowrap;
-	transform: rotate(-90deg);
-}
-.contacts-members__name span {
-	color: var(--deep-red);
-	letter-spacing: -0.8px;
-}
-.contacts-members__fisrt-name {
-	font-family: 'Inter';
-	font-size: 18px;
-	font-weight: 300;
-}
-.contacts-members__last-name {
-	font-family: 'Moniqa';
-	font-size: 35px;
-	font-weight: 900;
-	text-transform: uppercase;
 }

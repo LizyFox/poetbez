@@ -1,9 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("title", "Агенты Поэтического БеЗпредела");
+$APPLICATION->SetPageProperty("description", "Е@учий случай");
 $APPLICATION->SetTitle("Авторы");
 ?>
 
 <div class="container-lg">
+    <h1 class="h1"><?$APPLICATION->ShowTitle(false)?></h1>
+
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog",
         "",

@@ -1,0 +1,10 @@
+.authors-members .authors__img {
+	max-width: 355px;
+	height: 355px;
+}
+
+@media (max-width: 991px) {
+	.authors-members .authors__img {
+		max-width: 100%;
+	}
+}

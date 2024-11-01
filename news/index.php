@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новости компании");
+$APPLICATION->SetPageProperty("title", "Новости - Поэтический БеЗпредел");
+$APPLICATION->SetPageProperty("description", "Е@учий случай");
+$APPLICATION->SetTitle("Новости");
 ?>
 
 <!-- <form action="ajax.php" method="POST">

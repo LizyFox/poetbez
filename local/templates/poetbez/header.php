@@ -130,6 +130,4 @@ IncludeTemplateLangFile(__FILE__);
 		),
 		false
 	);?>
-					
-	<h5><?$APPLICATION->ShowTitle(false);?></h5> 
 	*/?>

@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Информация о компании");
+$APPLICATION->SetPageProperty("title", "О ПБ");
+$APPLICATION->SetPageProperty("description", "Е@учий случай");
+$APPLICATION->SetTitle("О нас");
 ?>
 
 
