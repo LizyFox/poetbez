@@ -20,3 +20,15 @@
 .breadcrumb__list span.breadrumb__last-item {
     color: var(--deep-red);
 }
+
+@media(max-width: 767px) {
+    .breadcrumb__list {
+        width: max-content;
+        display: flex;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .breadcrumb__list li {
+        white-space: nowrap;
+    }
+}

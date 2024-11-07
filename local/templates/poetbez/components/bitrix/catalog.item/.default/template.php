@@ -298,10 +298,5 @@ if (isset($arResult['ITEM']))
 		$templateData['ITEM']['OFFERS_SELECTED'] = $item['OFFERS_SELECTED'];
 		$templateData['ITEM']['JS_OFFERS'] = $item['JS_OFFERS'];
 	}
-	?>
-	<script>
-		var <?=$obName?> = new JCCatalogItem(<?=CUtil::PhpToJSObject($jsParams, false, true)?>);
-	</script>
-	<?
 	unset($item, $actualItem, $minOffer, $itemIds, $jsParams);
 }

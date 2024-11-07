@@ -1,0 +1,64 @@
+.h1 {
+	text-align: center;
+}
+.author-detail__link {
+	padding-left: 25px;
+	position: relative;
+}
+.author-detail__link::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--deep-red);
+    transform: translateY(-50%);
+}
+.author-detail__city {
+    color: var(--grey);
+    font-family: 'Moniqa';
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: -20px;
+}
+.author-detail__socseti-text {
+    color: var(--grey);
+    font-family: 'Moniqa';
+    font-weight: 500;
+    font-size: 32px;
+}
+.elem-nav__block a {
+    color: var(--grey);
+    font-size: 16px;
+    position: relative;
+}
+.elem-nav__block a:hover {
+    color: var(--deep-red);
+}
+.elem-nav__block a:hover::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--deep-red);
+}
+.poetry__ps {
+	font-family: 'Moniqa';
+	font-weight: 500;
+	color: var(--grey);
+	font-size: 27px;
+}
+ 
+@media(max-width: 767px) {
+	.author-detail__city {
+		margin-top: 10px;
+    	text-align: right;
+	}
+    .poetry__ps {
+        font-size: 20px;
+    }
+}

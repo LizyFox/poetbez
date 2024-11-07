@@ -9,6 +9,15 @@ IncludeTemplateLangFile(__FILE__);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="<?=$_SERVER['SERVER_NAME']?>" />
+	<meta property="og:image" content="<?=SITE_TEMPLATE_PATH?>/favicon/android-icon-192x192.png" />
+	<meta property="og:url" content="<?=$APPLICATION->GetCurPage();?>" />
+	<meta property="og:title" content="<?$APPLICATION->ShowTitle();?>" />
+	<meta property="og:description" content="<?$APPLICATION->ShowProperty('description');?>" />
+	
+
 	<link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="<?=SITE_TEMPLATE_PATH?>/favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="<?=SITE_TEMPLATE_PATH?>/favicon/apple-icon-72x72.png">

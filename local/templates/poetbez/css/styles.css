@@ -58,7 +58,7 @@ a:hover {
         transform: translateX(-4em) skewX(-45deg);
     }
     to {
-        transform: translateX(10em) skewX(-45deg);
+        transform: translateX(20em) skewX(-45deg);
     }
 }
 
@@ -215,14 +215,6 @@ main {
 }
 /* Звезды в футере */
 
-.error-page__block img {
-    max-height: 300px;
-    object-fit: contain;
-    max-width: 100%;
-}
-.error-page__block a:hover {
-    color: var(--deep-red);
-}
 @keyframes shine {
     0% {
         transform: scale(1);
@@ -255,6 +247,14 @@ main {
 }
 /* Звезды в футере */
 
+.error-page__block img {
+    max-height: 300px;
+    object-fit: contain;
+    max-width: 100%;
+}
+.error-page__block a:hover {
+    color: var(--deep-red);
+}
 footer {
     background-color: var(--deep-black);
     padding: 25px 0;
@@ -359,6 +359,9 @@ footer {
     }
     .main__h1 {
         font-size: 45px;
+    }
+    .h1 {
+        font-size: 48px;
     }
     .h2 {
         font-size: 32px;

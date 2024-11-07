@@ -1,3 +1,22 @@
 .author-detail__link {
 	font-size: 20px;
+	padding-left: 25px;
+	position: relative;
+}
+.author-detail__link::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--deep-red);
+    transform: translateY(-50%);
+}
+
+@media(max-width: 767px) {
+    .author-detail__link {
+        font-size: 17px;
+    }
 }

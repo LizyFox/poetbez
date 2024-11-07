@@ -2,9 +2,42 @@
 	max-width: 355px;
 	height: 355px;
 }
+.authors__img {
+	overflow: hidden;
+	position: relative;
+}
+.authors__img .authors__more {
+    height: 45px;
+    position: absolute;
+	opacity: 0;
+	right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #18181899;
+    transition: all 0.7s ease-in-out;
+    color: #fff;
+    transform: translate(0px, 250px);
+}
+.authors__img:hover .authors__more {
+    overflow: hidden;
+	opacity: 1;
+    transform: translate(0px, 0px);
+    transition: all 0.2s ease-in-out;
+}
+.authors__img .authors__more a {
+	font-family: 'Inter';
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
 
 @media (max-width: 991px) {
 	.authors-members .authors__img {
 		max-width: 100%;
+	}
+	.authors__img .authors__more {
+		right: 12px;
+		left: 47px;
+		opacity: 1;
+		transform: unset;
 	}
 }

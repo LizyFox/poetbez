@@ -71,13 +71,31 @@ $APPLICATION->SetTitle("Контактная информация");
             "VIEW_MODE" => "LINE"
         )
     );?>
-    <div class="col-12 col-sm-7 col-md-7 col-xl-5 pt-0 pt-md-5 mt-0 mt-md-5 mx-auto">
+    <?/*<div class="col-12 col-sm-7 col-md-7 col-xl-5 pt-0 pt-md-5 mt-0 mt-md-5 mx-auto">
         <?$APPLICATION->IncludeFile(
             SITE_DIR."include/contacts-donat.php",
             Array(),
             Array("MODE"=>"html")
         );?>
-    </div>
+    </div>*/?>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Поэтический БеЗпредел",
+  "url": "https://poet-bezpredel.ru/", 
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "По любым вопросам",
+    "email": "info@example.com"
+  },
+  "sameAs": [
+    "https://t.me/poet_bezpredel",
+    "https://vk.com/tula_bezpredel"
+  ]
+}
+</script>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

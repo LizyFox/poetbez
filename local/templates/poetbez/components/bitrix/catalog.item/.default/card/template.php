@@ -25,4 +25,4 @@ use \Bitrix\Main\Localization\Loc;
  */
 ?>
 
-<a href="<?=$item['DETAIL_PAGE_URL']?>" class="author-detail__link link_hover"><?=$item['NAME']?></a>
+<span itemprop="name"><a href="<?=$item['DETAIL_PAGE_URL']?>" class="author-detail__link link_hover" itemprop="url"><?=$item['NAME']?></a></span>

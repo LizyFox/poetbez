@@ -38,26 +38,30 @@ $positionClassMap = array(
 );
 ?>
 
-<div class="author-detail__block">
+<div class="author-detail__block" itemscope itemtype="http://schema.org/Person">
+	<meta itemprop="image" content="<?=$arResult['DETAIL_PICTURE']['SRC']?>">
+	<meta itemprop="name" content="<?=$APPLICATION->ShowTitle(false)?>">
 	<div class="author__info">
-		<div class="row justify-content-between mb-4">
+		<div class="row justify-content-between flex-column-reverse flex-md-row mb-4" itemscope itemtype="http://schema.org/CreativeWork">
+			<meta itemprop="genre" content="Поэзия" />
+			<meta itemprop="description" content="<?=GetMessage('AUTHOR_POETRY');?>" />
 			<div class="col-12 col-md-6">
 				<p class="author-detail__city"><?=GetMessage('AUTHOR_CITY');?>&nbsp;<?=$arResult['UF_AUTHOR_CITY'];?></p>
-				<div class="author-detail__desc mt-4"><?=$arResult['DESCRIPTION'];?></div>
+				<div class="author-detail__desc mt-3 mt-md-4"><?=$arResult['DESCRIPTION'];?></div>
 				<div class="author-detail__socseti-block mt-4">
 					<p class="author-detail__socseti-text"><?=GetMessage('AUTHOR_SOCSETI');?></p>
 					<?if (!empty($arResult['UF_AUTHOR_LINK_VK'])):?>
-						<a href="<?=$arResult['UF_AUTHOR_LINK_VK'];?>" class="author-detail__link me-2">
+						<a href="<?=$arResult['UF_AUTHOR_LINK_VK'];?>" class="me-2" target="_blank" rel="nofollow" itemprop="sameAs">
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/vkontakte.png" alt="<?=$arResult['NAME']?><?=GetMessage('AUTHOR_VK_IMG');?>">
 						</a>
 					<?endif;?>
 					<?if (!empty($arResult['UF_AUTHOR_LINK_TG'])):?>
-						<a href="<?=$arResult['UF_AUTHOR_LINK_TG'];?>" class="author-detail__link">
+						<a href="<?=$arResult['UF_AUTHOR_LINK_TG'];?>" target="_blank" rel="nofollow" itemprop="sameAs">
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/telegram.png" alt="<?=$arResult['NAME']?><?=GetMessage('AUTHOR_TG_IMG');?>">
 						</a>
 					<?endif;?>
 				</div>
-				<div class="author-detail__elements mt-5">
+				<div class="author-detail__elements mt-4 mt-md-5">
 					<p class="h2"><?=GetMessage('AUTHOR_POETRY');?></p>
 					<?
 					if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])) {
@@ -162,7 +166,7 @@ $positionClassMap = array(
 					?>
 				</div>
 			</div>
-			<div class="col-12 col-md-4">
+			<div class="col-12 col-sm-8 col-md-6 col-xl-4 mx-auto mx-md-0">
 				<div class="author-detail__img">
 					<img src="<?=makeWebp(($arResult['DETAIL_PICTURE']['SRC']));?>" alt="<?=$arResult['DETAIL_PICTURE']['ALT'];?>">
 				</div>

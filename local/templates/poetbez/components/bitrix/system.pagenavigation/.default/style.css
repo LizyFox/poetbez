@@ -1,0 +1,40 @@
+.pagin__block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.pagin__element {
+    border: 2px solid var(--deep-red);
+    border-radius: 50px;
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 7px;
+    line-height: 26px;
+}
+.pagin__element a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+}
+.pagin__element:not(.pagin_not-active):hover {
+    background-color: var(--deep-red);
+}
+.pagin_active, .pagin_not-active {
+    padding: 5px 10px;
+}
+.pagin_active {
+    background-color: var(--deep-red);
+}
+.nav_start, .nav_end {
+    min-width: 90px;
+}
+.nav_end {
+    margin-right: 0;
+}
+.pagin_not-active {
+    opacity: 0.5;
+}
