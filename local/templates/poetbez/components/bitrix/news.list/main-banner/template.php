@@ -22,7 +22,7 @@ $current_date = strtotime(date('Y-m-d H:i:s'));
 				<a href="<?=$arItem['PROPERTIES']['LINK_BANNER']['VALUE'];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>">
 					<picture class="w-100 h-100 d-inline-block">
 						<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
-						<img src="<?=makeWebp($arItem['DETAIL_PICTURE']['SRC']);?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT'];?>"  class="w-100 h-100" />
+						<img src="<?=makeWebp($arItem['DETAIL_PICTURE']['SRC']);?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT'];?>" class="w-100 h-100" />
 					</picture>
 				</a>
 			<?else:?>

@@ -1,12 +1,28 @@
-div.news-list
-{
-	word-wrap: break-word;
+.events__block {
+	height: 600px;
+	position: relative;
 }
-div.news-list img.preview_picture
-{
-	float:left;
-	margin:0 4px 6px 0;
+.events__block img {
+	object-fit: cover;
 }
-.news-date-time {
-	color:#486DAA;
+.events__name {
+	position: absolute;
+	bottom: 10px;
+	letter-spacing: -0.8px;
+	/* font-family: 'Inter'; */
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+	width: 100%;
+}
+
+@media (max-width: 991px) {
+	.events__block {
+		height: 350px;
+	}
+}
+@media (max-width: 767px) {
+	.events__name {
+		font-size: 18px;
+	}
 }
