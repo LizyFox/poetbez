@@ -18,7 +18,7 @@ $arSelect = [
 	'DETAIL_PAGE_URL',
 ];
 
-$res = CIBlockElement::GetList([], $arFilter, false, false, $arSelect);
+$res = CIBlockElement::GetList(['ID' => 'desc'], $arFilter, false, false, $arSelect);
 
 while ($ob = $res->GetNext()) {
 	$arResult['AUTHOR_POETRY'][$count]['NAME'] = $ob['NAME'];

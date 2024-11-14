@@ -12,7 +12,7 @@ $strReturn = '<ul class="breadcrumb__list" itemscope itemtype="https://schema.or
 for($index = 0, $itemSize = count($arResult); $index < $itemSize; $index++) {
 	$strReturn .= '&nbsp;<span>&mdash;</span>&nbsp;';
 
-	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
+	$title = $arResult[$index]["TITLE"];
 	$meta_count = $index + 1;
 
 	if($arResult[$index]["LINK"] <> "" && $arResult[$index]["LINK"] != $GLOBALS["APPLICATION"]->GetCurPage(false))

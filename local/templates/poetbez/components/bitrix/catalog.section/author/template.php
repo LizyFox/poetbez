@@ -40,7 +40,7 @@ $positionClassMap = array(
 
 <div class="author-detail__block" itemscope itemtype="http://schema.org/Person">
 	<meta itemprop="image" content="<?=$arResult['DETAIL_PICTURE']['SRC']?>">
-	<meta itemprop="name" content="<?=$APPLICATION->ShowTitle(false)?>">
+	<meta itemprop="name" content="<?=$arResult['NAME']?>">
 	<div class="author__info">
 		<div class="row justify-content-between flex-column-reverse flex-md-row mb-4" itemscope itemtype="http://schema.org/CreativeWork">
 			<meta itemprop="genre" content="Поэзия" />

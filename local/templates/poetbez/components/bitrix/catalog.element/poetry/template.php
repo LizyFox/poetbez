@@ -53,16 +53,16 @@ $this->setFrameMode(true);
 			<div class="text-center" itemprop="description">
 				<?=$arResult['DETAIL_TEXT']?>
 			</div>
-			<meta itemprop="name" content="<?=$APPLICATION->ShowTitle(false)?>">
-			<div class="elem-nav__block d-flex align-items-center <?=(!$arResult['PREV_ELEM_LINK']) ? 'justify-content-end' : 'justify-content-between'?> mt-4 mt-md-5">
-				<?if ($arResult['PREV_ELEM_ID']):?>
-					<p class="elem__prev">
-						<a href="<?=$arResult['PREV_ELEM_LINK']?>" title="<?=$arResult['PREV_ELEM_NAME']?>"><?=GetMessage('POETRY_PREV');?></a>
-					</p>
-				<?endif;?>
+			<meta itemprop="name" content="<?=$arResult['NAME']?>">
+			<div class="elem-nav__block d-flex align-items-center <?=(!$arResult['NEXT_ELEM_LINK']) ? 'justify-content-end' : 'justify-content-between'?> mt-4 mt-md-5">
 				<?if ($arResult['NEXT_ELEM_ID']):?>
 					<p class="elem__next">
 						<a href="<?=$arResult['NEXT_ELEM_LINK']?>" title="<?=$arResult['NEXT_ELEM_NAME']?>"><?=GetMessage('POETRY_NEXT');?></a>
+					</p>
+				<?endif;?>
+				<?if ($arResult['PREV_ELEM_ID']):?>
+					<p class="elem__prev">
+						<a href="<?=$arResult['PREV_ELEM_LINK']?>" title="<?=$arResult['PREV_ELEM_NAME']?>"><?=GetMessage('POETRY_PREV');?></a>
 					</p>
 				<?endif;?>
 			</div>
