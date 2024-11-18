@@ -19,6 +19,7 @@
 .author-detail__city {
     color: var(--grey);
     font-family: 'Moniqa';
+    line-height: normal;
     font-weight: 500;
     font-size: 32px;
     margin-top: -20px;
@@ -26,6 +27,7 @@
 .author-detail__socseti-text {
     color: var(--grey);
     font-family: 'Moniqa';
+    line-height: normal;
     font-weight: 500;
     font-size: 32px;
 }
@@ -48,6 +50,7 @@
 }
 .poetry__ps {
 	font-family: 'Moniqa';
+    line-height: normal;
 	font-weight: 500;
 	color: var(--grey);
 	font-size: 27px;

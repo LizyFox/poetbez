@@ -315,11 +315,18 @@ footer {
 }
 .authors__last-name {
 	font-family: 'Moniqa';
+    line-height: normal;
 	font-size: 35px;
 	font-weight: 900;
 	text-transform: uppercase;
 }
-
+.qtickets-button {
+    background-color: var(--deep-red) !important;
+    border: unset !important;
+    font-size: 18px !important;
+    font-family: 'Inter' !important;
+    line-height: 40px !important;
+}
 
 @media (min-width: 2510px) {
     .under-footer_bg img {
@@ -343,7 +350,7 @@ footer {
         font-size: 50px;
     }
     .h2 {
-        font-size: 38px;
+        font-size: 40px;
     }
     p, a, span {
         font-size: 16px;
@@ -366,7 +373,7 @@ footer {
         margin: 0 auto;
     }
     .main__h1 {
-        font-size: 45px;
+        font-size: 50px;
     }
     /* .h1 {
         font-size: 48px;

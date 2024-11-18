@@ -1,5 +1,5 @@
 .events__block {
-	height: 600px;
+	height: 580px;
 	position: relative;
 }
 .events__block img {
@@ -7,9 +7,18 @@
 }
 .events__name {
 	position: absolute;
-	bottom: 10px;
+	bottom: 35px;
 	letter-spacing: -0.8px;
 	/* font-family: 'Inter'; */
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+	width: 100%;
+}
+.events__date {
+	position: absolute;
+	bottom: 15px;
+	letter-spacing: -0.8px;
     font-size: 24px;
     font-weight: 300;
     text-align: center;
@@ -20,9 +29,12 @@
 	.events__block {
 		height: 350px;
 	}
+	.events__name {
+		bottom: 25px;
+	}
 }
 @media (max-width: 767px) {
-	.events__name {
+	.events__name, .events__date {
 		font-size: 18px;
 	}
 }

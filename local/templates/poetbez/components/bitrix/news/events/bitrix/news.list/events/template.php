@@ -28,13 +28,14 @@ $this->setFrameMode(true);
 			<h2 class="h2 text-center mt-5 pt-0 pt-md-3 pt-lg-5"><?=GetMessage('NEXT_EVENT');?></h2>
 		<?endif;?>
 
-		<div class="events__block">
+		<div class="events__block pb-0 pb-lg-2">
 			<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>">
 				<picture class="w-100 h-100 d-inline-block">
 					<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
 					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT'];?>"  class="w-100 h-100" />
 				</picture>
 				<p class="events__name"><?=$arItem["NAME"]?></p>
+				<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y H:i');?></p>
 			</a>
 		</div>
 
@@ -55,19 +56,22 @@ $this->setFrameMode(true);
 		<?if($key == 0):?>
 			<h2 class="h2 text-center mt-5 pt-0 pt-md-3 pt-lg-5"><?=GetMessage('PREV_EVENT');?></h2>
 		<?endif;?>
-		<div class="events__block">
+		<div class="events__block mb-5 pb-0 pb-lg-2">
 			<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>">
 				<picture class="w-100 h-100 d-inline-block">
 					<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
 					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" />
 				</picture>
 				<p class="events__name"><?=$arItem["NAME"]?></p>
+				<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y');?></p>
 			</a>
 		</div>
 	<?endforeach;?>
 
 	<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
-		<br /><?=$arResult["NAV_STRING"]?>
+		<div class="pagin__block mt-5">
+			<?=$arResult["NAV_STRING"]?>
+		</div>
 	<?endif;?>
 </div>
 
