@@ -172,17 +172,44 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 		<h2 class="h1">
 			<a href="/authors/"><?=GetMessage("MAIN_H2_AUTHORS")?></a>
 		</h2>
-
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:catalog.section.list",
+			"main-author",
+			Array(
+				"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+				"ADD_SECTIONS_CHAIN" => "N",
+				"CACHE_FILTER" => "N",
+				"CACHE_GROUPS" => "N",
+				"CACHE_TIME" => "36000000",
+				"CACHE_TYPE" => "A",
+				"COMPOSITE_FRAME_MODE" => "A",
+				"COMPOSITE_FRAME_TYPE" => "AUTO",
+				"COUNT_ELEMENTS" => "N",
+				"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+				"FILTER_NAME" => "",
+				"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+				"IBLOCK_ID" => "4",
+				"IBLOCK_TYPE" => "members",
+				"SECTION_CODE" => "",
+				"SECTION_FIELDS" => array("", ""),
+				"SECTION_ID" => "",
+				"SECTION_URL" => "",
+				"SECTION_USER_FIELDS" => array("UF_AUTHOR_ANONS_TEXT"),
+				"SHOW_PARENT_NAME" => "Y",
+				"TOP_DEPTH" => "1",
+				"VIEW_MODE" => "LINE"
+			)
+		);?>
 	</div>
 </div>
-<div class="main-merch__block">
+<?/*<div class="main-merch__block">
 	<div class="container-lg">
 		<h2 class="h1">
 			<a href="/merch/"><?=GetMessage("MAIN_H2_MERCH")?></a>
 		</h2>
 
 	</div>
-</div>
+</div>*/?>
 <div class="main-news__block">
 	<div class="container-lg">
 		<h2 class="h1">

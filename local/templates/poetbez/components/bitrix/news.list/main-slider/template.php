@@ -28,7 +28,7 @@ $this->setFrameMode(true);
 								<?endif;?>
 							<?endforeach;?>
 					<?endif;?>
-						<img src="<?=makeWebp(CFile::GetPath($itemPhoto));?>" alt="Фотошка <?=$count;?>" class="w-100 h-100" data-type="image" loading="lazy" />
+						<img src="<?=makeWebp(CFile::GetPath($itemPhoto));?>" alt="Фотошка <?=$count;?>" class="w-100 h-100" data-type="image" loading="lazy" data-fancybox="main-slider" />
 					<?if (!empty($arItem['PROPERTIES']['PHOTOS_ADAPTIVE'])):?>
 						</picture>
 					<?endif;?>

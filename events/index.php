@@ -17,7 +17,7 @@ $APPLICATION->SetTitle("Мероприятия");
     "AJAX_MODE" => "N",
     "IBLOCK_TYPE" => "events",
     "IBLOCK_ID" => "6",
-    "NEWS_COUNT" => "10",
+    "NEWS_COUNT" => "5",
     "USE_SEARCH" => "N",
     "USE_RSS" => "N",
     "USE_RATING" => "N",

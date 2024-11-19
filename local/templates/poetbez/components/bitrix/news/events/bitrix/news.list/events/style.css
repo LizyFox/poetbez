@@ -5,32 +5,35 @@
 .events__block img {
 	object-fit: cover;
 }
-.events__name {
+.events__block-info {
 	position: absolute;
-	bottom: 35px;
-	letter-spacing: -0.8px;
+	bottom: 8px;
+	width: 100%;
+    text-align: center;
+	background-color: #18181899;
+	padding: 10px 0;
+	text-shadow: 0px 6px 6px rgba(24, 24, 24, 1);
+}
+.events__name {
 	/* font-family: 'Inter'; */
     font-size: 24px;
     font-weight: 300;
-    text-align: center;
-	width: 100%;
+	letter-spacing: -0.8px;
 }
 .events__date {
-	position: absolute;
-	bottom: 15px;
+	/* font-family: 'Inter'; */
 	letter-spacing: -0.8px;
     font-size: 24px;
     font-weight: 300;
-    text-align: center;
-	width: 100%;
 }
 
 @media (max-width: 991px) {
 	.events__block {
 		height: 350px;
 	}
-	.events__name {
-		bottom: 25px;
+	.events__block-info {
+		bottom: 0;
+		padding: 5px 0;
 	}
 }
 @media (max-width: 767px) {

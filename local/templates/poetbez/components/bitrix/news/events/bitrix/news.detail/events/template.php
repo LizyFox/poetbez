@@ -85,10 +85,13 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 				</div>
 			<?else:?>
 				<?if (!empty($arResult["PROPERTIES"]["PHOTOS"]["VALUE"])):?>
-					<div class="col-12 mt-4">
+					<div class="col-12 mt-3 mt-lg-5">
+						<p class="h2 text-center">Фотки с тусовки</p>
 						<div class="event-detail__gallery">
-							<?foreach($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $photo):?>
-								<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="" class="w-100">
+							<?foreach($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo):?>
+								<div class="event-detail__gallery-item h-100">
+									<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="" class="w-100 h-100" loaded="lazy" data-fancybox="event-detail-slider-<?=$arResult['ID']?>">
+								</div>
 							<?endforeach?>
 						</div>
 					</div>

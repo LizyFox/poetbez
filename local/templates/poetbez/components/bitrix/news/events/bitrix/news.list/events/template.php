@@ -34,8 +34,10 @@ $this->setFrameMode(true);
 					<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
 					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT'];?>"  class="w-100 h-100" />
 				</picture>
-				<p class="events__name"><?=$arItem["NAME"]?></p>
-				<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y H:i');?></p>
+				<div class="events__block-info">
+					<p class="events__name"><?=$arItem["NAME"]?></p>
+					<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y H:i');?></p>
+				</div>
 			</a>
 		</div>
 
@@ -62,8 +64,10 @@ $this->setFrameMode(true);
 					<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
 					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" />
 				</picture>
-				<p class="events__name"><?=$arItem["NAME"]?></p>
-				<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y');?></p>
+				<div class="events__block-info">
+					<p class="events__name mb-2"><?=$arItem["NAME"]?></p>
+					<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y');?></p>
+				</div>
 			</a>
 		</div>
 	<?endforeach;?>
