@@ -28,25 +28,18 @@ $this->setFrameMode(true);
 			<h2 class="h2 text-center mt-5 pt-0 pt-md-3 pt-lg-5"><?=GetMessage('NEXT_EVENT');?></h2>
 		<?endif;?>
 
-		<div class="events__block pb-0 pb-lg-2">
-			<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>">
-				<picture class="w-100 h-100 d-inline-block">
+		<div class="events__block pb-0 pb-lg-2" itemscope itemtype="https://schema.org/Event">
+			<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>" itemprop="url">
+				<picture class="w-100 h-100 d-inline-block" itemscope itemtype="https://schema.org/ImageObject">
 					<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
-					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT'];?>"  class="w-100 h-100" />
+					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['PREVIEW_PICTURE']['ALT'];?>"  class="w-100 h-100" itemprop="image" />
 				</picture>
 				<div class="events__block-info">
-					<p class="events__name"><?=$arItem["NAME"]?></p>
-					<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y H:i');?></p>
+					<p class="events__name" itemprop="name"><?=$arItem["NAME"]?></p>
+					<p class="events__date mb-0" itemprop="startDate"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y H:i');?></p>
 				</div>
 			</a>
 		</div>
-
-		<?/*if($key == 0):?>
-			<p class="h3 text-center mt-3">
-				<?=GetMessage('TIME_COUNTER');?>
-				<span id="time-counter"></span>
-			</p>
-		<?endif;*/?>
 	<?endforeach;?>
 
 	<?foreach($arResult["PREV_EVENT"] as $key => $arItem):?>
@@ -58,15 +51,15 @@ $this->setFrameMode(true);
 		<?if($key == 0):?>
 			<h2 class="h2 text-center mt-5 pt-0 pt-md-3 pt-lg-5"><?=GetMessage('PREV_EVENT');?></h2>
 		<?endif;?>
-		<div class="events__block mb-5 pb-0 pb-lg-2">
-			<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>">
-				<picture class="w-100 h-100 d-inline-block">
+		<div class="events__block mb-5 pb-0 pb-lg-2" itemscope itemtype="https://schema.org/Event">
+			<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 h-100 d-inline-block"  title="<?=$arItem['NAME'];?>" itemprop="url">
+				<picture class="w-100 h-100 d-inline-block" itemscope itemtype="https://schema.org/ImageObject">
 					<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
-					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" />
+					<img src="<?=makeWebp($arItem["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arItem['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" itemprop="image" />
 				</picture>
 				<div class="events__block-info">
-					<p class="events__name mb-2"><?=$arItem["NAME"]?></p>
-					<p class="events__date mb-0"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y');?></p>
+					<p class="events__name mb-2" itemprop="name"><?=$arItem["NAME"]?></p>
+					<p class="events__date mb-0" itemprop="startDate"><?= (new \Bitrix\Main\Type\DateTime($arItem["ACTIVE_TO"]))->format('d.m.Y');?></p>
 				</div>
 			</a>
 		</div>

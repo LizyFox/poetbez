@@ -53,10 +53,10 @@ $this->setFrameMode(true);
 	</div>
 </div>
 
-<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+<?/*if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<div class="col-12">
 		<div class="pagin__block mt-5">
 			<?=$arResult["NAV_STRING"]?>
 		</div>
 	</div>
-<?endif;?>
+<?endif;*/?>

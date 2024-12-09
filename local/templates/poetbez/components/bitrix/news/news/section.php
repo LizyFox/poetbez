@@ -22,36 +22,36 @@ $this->setFrameMode(true);
 <?endif?>
 
 <?if($arParams["USE_SEARCH"]=="Y"):?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:search.form",
-	"",
-	Array(
-		"PAGE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["search"],
-		"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
-	),
-	$component
-);?>
+	<?$APPLICATION->IncludeComponent(
+		"bitrix:search.form",
+		"",
+		Array(
+			"PAGE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["search"],
+			"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
+		),
+		$component
+	);?>
 <?endif?>
 
 <?if($arParams["USE_FILTER"]=="Y"):?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.filter",
-	"bootstrap_v4",
-	Array(
-		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"FILTER_NAME" => $arParams["FILTER_NAME"],
-		"FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
-		"PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
-		"CACHE_TYPE" => $arParams["CACHE_TYPE"],
-		"CACHE_TIME" => $arParams["CACHE_TIME"],
-		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
-		"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
-		"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"]
-	),
-	$component
-);
-?>
+	<?$APPLICATION->IncludeComponent(
+		"bitrix:catalog.filter",
+		"bootstrap_v4",
+		Array(
+			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+			"FILTER_NAME" => $arParams["FILTER_NAME"],
+			"FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+			"PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+			"CACHE_TYPE" => $arParams["CACHE_TYPE"],
+			"CACHE_TIME" => $arParams["CACHE_TIME"],
+			"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+			"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+			"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"]
+		),
+		$component
+	);
+	?>
 <?endif?>
 
 <div class="news-list__sidebar mb-4 mb-lg-5">

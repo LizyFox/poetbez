@@ -18,12 +18,15 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 ?>
 
 <div class="event-detail__banner mb-3 mb-md-5">
-	<picture class="w-100 h-100 d-inline-block">
+	<picture class="w-100 h-100 d-inline-block" itemscope itemtype="https://schema.org/ImageObject">
 		<source srcset="<?=makeWebp($arResult['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
-		<img src="<?=makeWebp($arResult["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arResult['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" />
+		<img src="<?=makeWebp($arResult["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arResult['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" itemprop="image" />
 	</picture>
 </div>
-<div class="event-detail__block">
+<div class="event-detail__block" itemscope itemtype="https://schema.org/Event">
+	<link itemprop="url" href="<?=$APPLICATION->GetCurPage();?>">
+	<meta itemprop="name" content="<?=$arResult['NAME'];?>">
+	<meta itemprop="startDate" content="<?= (new \Bitrix\Main\Type\DateTime($arResult["ACTIVE_TO"]))->format('d.m.Y');?>">
 	<div class="container-lg">
 		<div class="row flex-column-reverse flex-md-row">
 			<div class="col-12 col-md-7 col-lg-6 mb-4 mb-md-0">
@@ -90,11 +93,11 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 			<?else:?>
 				<?if (!empty($arResult["PROPERTIES"]["PHOTOS"]["VALUE"])):?>
 					<div class="col-12 mt-3 mt-lg-5">
-						<p class="h2 text-center">Фотки с тусовки</p>
-						<div class="event-detail__gallery">
+						<p class="h2 text-center"><?=GetMessage('EVENT_PHOTOS');?></p>
+						<div class="event-detail__gallery" itemscope itemtype="https://schema.org/ImageObject">
 							<?foreach($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo):?>
 								<div class="event-detail__gallery-item h-100 w-100">
-									<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="" class="w-100 h-100" loaded="lazy" data-fancybox="event-detail-slider-<?=$arResult['ID']?>">
+									<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="" class="w-100 h-100" loaded="lazy" data-fancybox="event-detail-slider-<?=$arResult['ID']?>" itemprop="image">
 								</div>
 							<?endforeach?>
 						</div>
