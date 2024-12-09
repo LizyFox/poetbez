@@ -10,7 +10,7 @@ if($arResult[count($arResult)-1]["LINK"]!="" && $arResult[count($arResult)-1]["L
 
 $strReturn = '<ul class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="'.SITE_DIR.'" itemprop="item"><span itemprop="name">'.GetMessage("HDR_GOTO_MAIN").'</span></a><meta itemprop="position" content="0"></li>';
 for($index = 0, $itemSize = count($arResult); $index < $itemSize; $index++) {
-	$strReturn .= '&nbsp;<span>&mdash;</span>&nbsp;';
+	$strReturn .= '&nbsp;<span class="separator">&mdash;</span>&nbsp;';
 
 	$title = $arResult[$index]["TITLE"];
 	$meta_count = $index + 1;

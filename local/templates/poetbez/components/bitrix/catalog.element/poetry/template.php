@@ -23,7 +23,7 @@ $this->setFrameMode(true);
 					<div class="author-detail__elements">
 						<?foreach($arResult['AUTHOR_POETRY'] as $element):?>
 							<div class="author-detail__element">
-								<a href="<?=$element['DETAIL_PAGE_URL']?>" class="author-detail__link link_hover"><?=$element['NAME']?></a>
+								<a href="<?=$element['DETAIL_PAGE_URL']?>" class="author-detail__link link_hover<?=($APPLICATION->GetCurPage() == $element['DETAIL_PAGE_URL']) ? ' active' : ''?>"><?=$element['NAME']?></a>
 							</div>
 						<?endforeach?>
 					</div>

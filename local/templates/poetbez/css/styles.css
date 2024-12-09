@@ -13,6 +13,9 @@ body {
     font-size: 18px;
     line-height: 130%;
 }
+main {
+    /* min-height: 100vh; */
+}
 a {
     color: #fff;
     text-decoration: none;
@@ -31,6 +34,9 @@ a:hover {
 }
 .h2 {
     font-size: 48px;
+}
+.text_light-red {
+    color: var(--light-red);
 }
 .button {
     width: fit-content;
@@ -147,16 +153,13 @@ a:hover {
 .link-tg {
     margin-right: 15px;
     display: inline-block;
-    height: 100%;
 }
 .link-mail {
     margin-left: 15px;
     display: inline-block;
-    height: 100%;
 }
 .link-vk {
     display: inline-block;
-    height: 100%;
 }
 .btn-coop {
     margin-right: 15px;

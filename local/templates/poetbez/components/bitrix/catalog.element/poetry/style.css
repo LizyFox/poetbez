@@ -16,6 +16,13 @@
     background-color: var(--deep-red);
     transform: translateY(-50%);
 }
+.author-detail__link.active {
+    color: var(--deep-red);
+    position: relative;
+}
+.author-detail__link.active::before {
+    height: 2px;
+}
 .author-detail__city {
     color: var(--grey);
     font-family: 'Moniqa';

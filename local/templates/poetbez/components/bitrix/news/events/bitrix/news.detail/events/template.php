@@ -17,7 +17,7 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 
 ?>
 
-<div class="event-detail__banner mb-5">
+<div class="event-detail__banner mb-3 mb-md-5">
 	<picture class="w-100 h-100 d-inline-block">
 		<source srcset="<?=makeWebp($arResult['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />
 		<img src="<?=makeWebp($arResult["DETAIL_PICTURE"]["SRC"]);?>" alt="<?=$arResult['DETAIL_PICTURE']['ALT'];?>" class="w-100 h-100" />
@@ -25,8 +25,8 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 </div>
 <div class="event-detail__block">
 	<div class="container-lg">
-		<div class="row">
-			<div class="col-12 col-lg-6 mb-4 mb-lg-0">
+		<div class="row flex-column-reverse flex-md-row">
+			<div class="col-12 col-md-7 col-lg-6 mb-4 mb-md-0">
 				<div class="event-detail__text">
 					<?if ($current_date >= (strtotime($arResult['ACTIVE_TO'])) && $arResult["DETAIL_TEXT"]):?>
 						<?=$arResult["DETAIL_TEXT"]?>
@@ -54,7 +54,7 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 					);?>
 				</div>
 			</div>
-			<div class="col-12 col-lg-6">
+			<div class="col-12 col-md-5 col-lg-6">
 				<?if ($current_date <= (strtotime($arResult['ACTIVE_TO']))):?>
 					<div class="event-detail__map">
 						<?$APPLICATION->IncludeFile(
@@ -64,9 +64,13 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 						);?>
 					</div>
 				<?else:?>
-					<img src="" alt="">
+					<div class="events__pechat mb-3 mb-md-0">
+						<img style="w-100" src="<?=makeWebp(SITE_TEMPLATE_PATH.'/images/pechat-events.png')?>" alt="Мероприятие <?=$arResult["NAME"]?> прошло">
+					</div>
 				<?endif;?>
 			</div>
+		</div>
+		<div class="row">
 			<?if ($current_date <= (strtotime($arResult['ACTIVE_TO']))):?>
 				<div class="col-12">
 					<div class="event-detail__zapis mt-5">
@@ -89,7 +93,7 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 						<p class="h2 text-center">Фотки с тусовки</p>
 						<div class="event-detail__gallery">
 							<?foreach($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo):?>
-								<div class="event-detail__gallery-item h-100">
+								<div class="event-detail__gallery-item h-100 w-100">
 									<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="" class="w-100 h-100" loaded="lazy" data-fancybox="event-detail-slider-<?=$arResult['ID']?>">
 								</div>
 							<?endforeach?>

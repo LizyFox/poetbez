@@ -119,10 +119,11 @@ button:focus:not(:focus-visible) {
         height: 100vh;
     }
     .top-menu__block nav {
-        height: auto;
+        height: fit-content;
     }
     .top-menu {
         flex-direction: column;
+        justify-content: start;
     }
     .top-menu li {
         margin-bottom: 10px;

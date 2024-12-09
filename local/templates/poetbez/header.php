@@ -12,8 +12,8 @@ IncludeTemplateLangFile(__FILE__);
 	<meta property="og:locale" content="ru_RU" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="<?=$_SERVER['SERVER_NAME']?>" />
-	<meta property="og:image" content="<?=SITE_TEMPLATE_PATH?>/favicon/android-icon-192x192.png" />
-	<meta property="og:url" content="<?=$APPLICATION->GetCurPage();?>" />
+	<meta property="og:image" content="https://<?=$_SERVER['SERVER_NAME']?><?=SITE_TEMPLATE_PATH?>/favicon/android-icon-192x192.png" />
+	<meta property="og:url" content="https://<?=$_SERVER['SERVER_NAME']?><?=$APPLICATION->GetCurPage();?>" />
 	<meta property="og:title" content="<?$APPLICATION->ShowTitle();?>" />
 	<meta property="og:description" content="<?$APPLICATION->ShowProperty('description');?>" />
 	
