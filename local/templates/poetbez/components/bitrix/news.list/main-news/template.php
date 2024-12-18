@@ -41,9 +41,9 @@ $this->setFrameMode(true);
 									<meta itemprop="name" content="<?=$arItem['NAME'];?>">
 								</a>
 							</div>
-							<div class="news-item__anons" itemprop="description"><?=$arItem['PREVIEW_TEXT'];?></div>
+							<meta itemprop="description" content="<?=$arItem['PREVIEW_TEXT'];?>">
 						</div>
-						<div class="news-item__btn">
+						<div class="news-item__btn mt-3">
 							<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="d-flex align-items-center justify-content-center h-100 w-100 p-2"><?=GetMessage('NEWS_DETAIL');?></a>
 						</div>
 					</div>
@@ -52,11 +52,3 @@ $this->setFrameMode(true);
 		<?endforeach;?>
 	</div>
 </div>
-
-<?/*if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
-	<div class="col-12">
-		<div class="pagin__block mt-5">
-			<?=$arResult["NAV_STRING"]?>
-		</div>
-	</div>
-<?endif;*/?>

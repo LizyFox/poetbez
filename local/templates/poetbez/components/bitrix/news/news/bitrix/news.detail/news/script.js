@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.event-detail__gallery').owlCarousel({
+    $('.news-detail__gallery').owlCarousel({
         loop: true,
         margin: 15,
         responsiveClass: true,

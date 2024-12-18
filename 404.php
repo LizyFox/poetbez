@@ -22,6 +22,7 @@ $APPLICATION->SetTitle("404 Not Found");
 		<p>
 			Зато есть <a href="/" class="text-decoration-underline">Главная страница</a>
 		</p>
+		<img class="error__gif" src="<?=SITE_TEMPLATE_PATH?>/images/savkin-gif.gif" alt="404">
 	</div>
 </div>
 

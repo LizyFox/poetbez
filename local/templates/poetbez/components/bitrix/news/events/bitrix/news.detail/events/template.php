@@ -97,7 +97,7 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 						<div class="event-detail__gallery" itemscope itemtype="https://schema.org/ImageObject">
 							<?foreach($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo):?>
 								<div class="event-detail__gallery-item h-100 w-100">
-									<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="" class="w-100 h-100" loaded="lazy" data-fancybox="event-detail-slider-<?=$arResult['ID']?>" itemprop="image">
+									<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="<?=GetMessage('EVENT_PHOTOS');?> - <?=$key+1;?>" class="w-100 h-100" loaded="lazy" data-fancybox="event-detail-slider-<?=$arResult['ID']?>" itemprop="image">
 								</div>
 							<?endforeach?>
 						</div>

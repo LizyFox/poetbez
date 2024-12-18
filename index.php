@@ -169,8 +169,8 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 </div>
 <div class="main-agents__block">
 	<div class="container-lg">
-		<h2 class="h1">
-			<a href="/authors/"><?=GetMessage("MAIN_H2_AUTHORS")?></a>
+		<h2 class="h2">
+			<a href="/authors/" class="h2"><?=GetMessage("MAIN_H2_AUTHORS")?></a>
 		</h2>
 		<?$APPLICATION->IncludeComponent(
 			"bitrix:catalog.section.list",
@@ -204,16 +204,16 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 </div>
 <?/*<div class="main-merch__block">
 	<div class="container-lg">
-		<h2 class="h1">
-			<a href="/merch/"><?=GetMessage("MAIN_H2_MERCH")?></a>
+		<h2 class="h2">
+			<a href="/merch/" class="h2"><?=GetMessage("MAIN_H2_MERCH")?></a>
 		</h2>
 
 	</div>
 </div>*/?>
 <div class="main-news__block">
 	<div class="container-lg">
-		<h2 class="h1">
-			<a href="/news/"><?=GetMessage("MAIN_H2_NEWS")?></a>
+		<h2 class="h2">
+			<a href="/news/" class="h2"><?=GetMessage("MAIN_H2_NEWS")?></a>
 		</h2>
 		<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -248,7 +248,7 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 				"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 				"INCLUDE_SUBSECTIONS" => "Y",
 				"MESSAGE_404" => "",
-				"NEWS_COUNT" => "6",
+				"NEWS_COUNT" => "4",
 				"PAGER_BASE_LINK_ENABLE" => "N",
 				"PAGER_DESC_NUMBERING" => "N",
 				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",

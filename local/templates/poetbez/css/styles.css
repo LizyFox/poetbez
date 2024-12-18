@@ -6,10 +6,8 @@ html {
     overflow-x: hidden;
 }
 body {
-    /* font-family: 'RobotoSlab'; */
     font-family: 'Inter';
     color: #fff;
-    /* font-size: 17px; */
     font-size: 18px;
     line-height: 130%;
 }
@@ -329,6 +327,10 @@ footer {
     font-size: 18px !important;
     font-family: 'Inter' !important;
     line-height: 40px !important;
+}
+.error__gif {
+    width: 350px;
+    height: 350px;
 }
 
 @media (min-width: 2510px) {

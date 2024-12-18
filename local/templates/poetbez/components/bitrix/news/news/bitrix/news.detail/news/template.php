@@ -28,4 +28,19 @@ $this->setFrameMode(true);
 			<?endif;?>
 		</div>
 	</div>
+	<?if (!empty($arResult["PROPERTIES"]["NEWS_PHOTOS"]["VALUE"])):?>
+		<div class="col-12 mt-3 mt-lg-5">
+			<p class="h2 text-center"><?=GetMessage('NEWS_PHOTOS');?></p>
+			<div class="news-detail__gallery" itemscope itemtype="https://schema.org/ImageObject">
+				<?foreach($arResult["PROPERTIES"]["NEWS_PHOTOS"]["VALUE"] as $key => $photo):?>
+					<div class="news-detail__gallery-item h-100 w-100">
+						<img src="<?=makeWebp(CFile::GetPath($photo))?>" alt="<?=GetMessage('NEWS_PHOTOS');?> - <?=$key+1;?>" class="w-100 h-100" loaded="lazy" data-fancybox="news-detail-slider-<?=$arResult['ID']?>" itemprop="image">
+					</div>
+				<?endforeach?>
+			</div>
+		</div>
+	<?endif;?>
+</div>
+<div class="news-another__block mt-sm-2 pt-sm-3 mt-md-5 pt-md-3 pt-lg-5">
+	<p class="h2"><?=GetMessage('NEWS_ANOTHER');?></p>
 </div>
