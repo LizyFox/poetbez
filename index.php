@@ -167,7 +167,7 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 		</div>
 	</div>
 </div>
-<div class="main-agents__block">
+<div class="main-agents__block mb-5">
 	<div class="container-lg">
 		<h2 class="h2">
 			<a href="/authors/" class="h2"><?=GetMessage("MAIN_H2_AUTHORS")?></a>
@@ -181,9 +181,7 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 				"CACHE_FILTER" => "N",
 				"CACHE_GROUPS" => "N",
 				"CACHE_TIME" => "36000000",
-				"CACHE_TYPE" => "A",
-				"COMPOSITE_FRAME_MODE" => "A",
-				"COMPOSITE_FRAME_TYPE" => "AUTO",
+				"CACHE_TYPE" => "N",
 				"COUNT_ELEMENTS" => "N",
 				"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
 				"FILTER_NAME" => "",

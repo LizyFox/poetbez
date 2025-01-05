@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Новости");
             "CACHE_FILTER" => "N",
             "CACHE_GROUPS" => "N",
             "CACHE_TIME" => "36000000",
-            "CACHE_TYPE" => "A",
+            "CACHE_TYPE" => "N",
             "CHECK_DATES" => "Y",
             "COMPOSITE_FRAME_MODE" => "A",
             "COMPOSITE_FRAME_TYPE" => "AUTO",

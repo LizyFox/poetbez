@@ -1,5 +1,11 @@
+ul {
+	list-style: none;
+}
+
 ul.map-level-0 a {
-	font-weight: bold;
+	/* font-weight: bold; */
+	padding-left: 25px;
+    position: relative;
 }
 
 ul.map-level-1 a, ul.map-level-2 a, ul.map-level-3 a {
@@ -10,3 +16,14 @@ ul.map-level-1 a, ul.map-level-2 a, ul.map-level-3 a {
 	vertical-align: top;
 }
 
+.author-detail__link::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--deep-red);
+    transform: translateY(-50%);
+}

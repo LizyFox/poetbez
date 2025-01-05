@@ -10,7 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+$this->setFrameMode(false);
 
 ?>
 
@@ -29,7 +29,7 @@ $this->setFrameMode(true);
 		</div>
 	</div>
 	<?if (!empty($arResult["PROPERTIES"]["NEWS_PHOTOS"]["VALUE"])):?>
-		<div class="col-12 mt-3 mt-lg-5">
+		<div class="mt-3 mt-lg-5">
 			<p class="h2 text-center"><?=GetMessage('NEWS_PHOTOS');?></p>
 			<div class="news-detail__gallery" itemscope itemtype="https://schema.org/ImageObject">
 				<?foreach($arResult["PROPERTIES"]["NEWS_PHOTOS"]["VALUE"] as $key => $photo):?>
@@ -43,4 +43,36 @@ $this->setFrameMode(true);
 </div>
 <div class="news-another__block mt-sm-2 pt-sm-3 mt-md-5 pt-md-3 pt-lg-5">
 	<p class="h2"><?=GetMessage('NEWS_ANOTHER');?></p>
+	<div class="news-another__items">
+		<?foreach($arResult["ANOTHER_ITEMS"] as $arItem):?>
+			<div class="w-100">
+				<div class="news-item__block h-100" itemscope itemtype="https://schema.org/Article">
+					<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="w-100 d-inline-block">
+						<div class="news-item__img" itemscope itemtype="https://schema.org/ImageObject">
+							<img src="<?=makeWebp($arItem["SECTION_PICTURE"]);?>" alt="Логотип <?=$arItem["SECTION_NAME"]?>" class="news-item__img-pechat" />
+							<?/*<picture class="w-100 h-100 d-inline-block">
+								<source srcset="<?=makeWebp($arItem['PREVIEW_PICTURE']['SRC']);?>" media="(max-width: 575px)" />*/?>
+								<img src="<?=makeWebp(CFile::GetPath($arItem["PREVIEW_PICTURE"]));?>" alt="<?=$arItem['NAME'];?>" class="w-100 h-100" itemprop="image" />
+							<?/*</picture>*/?>
+						</div>
+					</a>
+					<div class="new-item__info d-flex flex-column justify-content-between">
+						<div>
+							<div class="news-item__date" itemprop="datePublished"><?=FormatDate("d M Y", MakeTimeStamp($arItem["ACTIVE_FROM"]));?></div>
+							<div class="news-item__name">
+								<a href="<?=$arItem["DETAIL_PAGE_URL"];?>">
+									<?=$arItem['NAME'];?>
+									<meta itemprop="name" content="<?=$arItem['NAME'];?>">
+								</a>
+							</div>
+							<meta itemprop="description" content="<?=$arItem['PREVIEW_TEXT'];?>">
+						</div>
+						<div class="news-item__btn mt-3">
+							<a href="<?=$arItem["DETAIL_PAGE_URL"];?>" class="d-flex align-items-center justify-content-center h-100 w-100 p-2"><?=GetMessage('NEWS_DETAIL');?></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?endforeach;?>
+	</div>
 </div>

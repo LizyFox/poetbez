@@ -51,4 +51,7 @@ $this->setFrameMode(true);
 			</div>
 		<?endforeach;?>
 	</div>
+	<div class="text-center mt-5">
+		<a href="/<?=$arResult["CODE"]?>/" class="button ask__btn mb-0"><?=GetMessage('NEWS_ALL')?></a>
+	</div>
 </div>

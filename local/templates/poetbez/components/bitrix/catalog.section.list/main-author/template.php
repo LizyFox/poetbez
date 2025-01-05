@@ -10,7 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+$this->setFrameMode(false);
 
 $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
 $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELETE");
@@ -19,74 +19,84 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 $this->AddEditAction($arResult['SECTION']['ID'], $arResult['SECTION']['EDIT_LINK'], $strSectionEdit);
 $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
 
-// echo '<pre>';
-// var_export($arResult['SECTIONS']);
-// echo '</pre>';
-
 ?>
 
-<?if ($arResult["SECTIONS_COUNT"] > 0):?>
-	<div class="main__authors-block">
-		<?foreach ($arResult['SECTIONS'] as $key => $arSection):?>
-			<?if ($key <= 6):?>
-				<?if($key == 0):?>
-					<div class="row">
-						<div class="col-9">
+<div class="main__authors-block">
+	<?foreach ($arResult['SECTIONS_NEW'] as $key => $arSection):?>
+		<?if ($key <= 6):?>
 
-						</div>
-						<div class="col-3">
-
-						</div>
-				<?elseif($key == 5):?>
-					</div>
-					<div class="row flex-row-reverse">
-						<div class="col-9">
-
-						</div>
-						<div class="col-3">
-
-						</div>
-				<?endif;?>
-				<?if($key == 6):?>
-					</div>
-				<?endif;?>
+			<?if($key == 0):?>
+				<div class="row g-4">
+					<div class="col-8">
+						<div class="row g-4">
 			<?endif;?>
-		<?endforeach;?>
-	</div>
 
+			<?if($key >= 0 && $key < 2):?>
+							<div class="col-12">
+								<div class="main-author__item <?=($key == 0) ? 'main-author_small' : 'main-author_big'?>">
+									<a class="main-author__link" href="<?=$arSection['SECTION_PAGE_URL']?>">
+										<img src="<?=makeWebp(($arSection['PICTURE']) ? $arSection['PICTURE'] : $arSection['DETAIL_PICTURE']);?>" alt="<?=$arSection['NAME']?>" class="w-100 h-100 main-author__img">
+										<div class="main-author__info">
+											<div class="main-author__name"><?=$arSection['NAME']?></div>
+											<div class="main-author__descr"><?=$arSection['UF_AUTHOR_ANONS_TEXT']?></div>
+										</div>
+									</a>
+								</div>
+							</div>
+			<?endif;?>
+			
+			<?if($key == 2):?>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="row g-4">
+			<?endif;?>
 
+			<?if($key >= 2 && $key < 4):?>
+							<div class="col-12">
+								<div class="main-author__item <?=($key == 2) ? 'main-author_big' : 'main-author_small'?>">
+									<a class="main-author__link" href="<?=$arSection['SECTION_PAGE_URL']?>">
+										<img src="<?=makeWebp(($arSection['PICTURE']) ? $arSection['PICTURE'] : $arSection['DETAIL_PICTURE']);?>" alt="<?=$arSection['NAME']?>" class="w-100 h-100 main-author__img">
+										<div class="main-author__info">
+											<div class="main-author__name"><?=$arSection['NAME']?></div>
+											<div class="main-author__descr"><?=$arSection['UF_AUTHOR_ANONS_TEXT']?></div>
+										</div>
+									</a>
+								</div>
+							</div>
+			<?endif;?>
 
-
-
-	<div class="authors__block contacts-members">
-		<div class="row justify-content-center flex-column flex-md-row">
-			<?foreach ($arResult['SECTIONS'] as &$arSection):?>
-				<?if ($arSection['UF_AUTHOR_IS_ADMIN'] == true):?>
-					<div class="col-9 col-sm-8 col-md-4 col-xl-3 mx-auto mx-md-0 text-center text-md-start">
-						<div class="authors__img mx-auto mx-md-0">
-							<a href="<?=$arSection['SECTION_PAGE_URL'];?>" class="d-flex align-items-end justify-content-between flex-row-reverse h-100 w-100">
-								<img src="<?=makeWebp(CFile::GetPath($arSection['DETAIL_PICTURE']));?>" alt="<?=$arSection['PICTURE']['ALT'];?>">
-								<div class="authors__name">
-									<span class="authors__fisrt-name"><?=$arSection['UF_AUTHOR_NAME'];?></span> &nbsp;
-									<span class="authors__last-name"><?=$arSection['UF_AUTHOR_LAST_NAME'];?></span>
+			<?if($key == 4):?>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="main-author__item main-author_big">
+							<a class="main-author__link" href="<?=$arSection['SECTION_PAGE_URL']?>">
+								<img src="<?=makeWebp(($arSection['PICTURE']) ? $arSection['PICTURE'] : $arSection['DETAIL_PICTURE']);?>" alt="<?=$arSection['NAME']?>" class="w-100 h-100 main-author__img">
+								<div class="main-author__info">
+									<div class="main-author__name"><?=$arSection['NAME']?></div>
+									<div class="main-author__descr"><?=$arSection['UF_AUTHOR_ANONS_TEXT']?></div>
 								</div>
 							</a>
 						</div>
-						<div class="authors__info mt-2 mb-5 mb-md-0">
-							<a href="<?=$arSection['UF_AUTHOR_LINK_VK'];?>" class="link-vk me-3" rel="nofollow" target="_blank">
-								<img src="<?=SITE_TEMPLATE_PATH?>/images/vkontakte.png" alt="ВКонтакте">
+					</div>
+			<?endif;?>
+
+			<?if($key == 5):?>
+					<div class="col-8">
+						<div class="main-author__item main-author_big">
+							<a class="main-author__link" href="<?=$arSection['SECTION_PAGE_URL']?>">
+								<img src="<?=makeWebp(($arSection['PICTURE']) ? $arSection['PICTURE'] : $arSection['DETAIL_PICTURE']);?>" alt="<?=$arSection['NAME']?>" class="w-100 h-100 main-author__img">
+								<div class="main-author__info">
+									<div class="main-author__name"><?=$arSection['NAME']?></div>
+									<div class="main-author__descr"><?=$arSection['UF_AUTHOR_ANONS_TEXT']?></div>
+								</div>
 							</a>
-							<?$APPLICATION->IncludeFile(
-								SITE_DIR."include/email-contacts.php",
-								Array(),
-								Array("MODE"=>"html")
-							);?>
-							<p class="mt-1 mb-0"><?=$arSection['UF_AUTHOR_ANONS_TEXT'];?></p>
 						</div>
 					</div>
-				<?endif;?>
-			<?endforeach;?>
-			<?unset($arSection);?>
-		</div>
-	</div>
-<?endif;?>
+				</div>
+			<?endif;?>
+
+		<?endif;?>
+	<?endforeach;?>
+</div>
