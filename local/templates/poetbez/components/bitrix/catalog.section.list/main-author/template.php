@@ -27,7 +27,7 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
 
 			<?if($key == 0):?>
 				<div class="row g-4">
-					<div class="col-8">
+					<div class="col-12 col-sm-6 col-md-7 col-lg-8">
 						<div class="row g-4">
 			<?endif;?>
 
@@ -48,7 +48,7 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
 			<?if($key == 2):?>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-12 col-sm-6 col-md-5 col-lg-4">
 						<div class="row g-4">
 			<?endif;?>
 
@@ -69,7 +69,7 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
 			<?if($key == 4):?>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-12 col-sm-6 col-md-5 col-lg-4">
 						<div class="main-author__item main-author_big">
 							<a class="main-author__link" href="<?=$arSection['SECTION_PAGE_URL']?>">
 								<img src="<?=makeWebp(($arSection['PICTURE']) ? $arSection['PICTURE'] : $arSection['DETAIL_PICTURE']);?>" alt="<?=$arSection['NAME']?>" class="w-100 h-100 main-author__img">
@@ -83,7 +83,7 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
 			<?endif;?>
 
 			<?if($key == 5):?>
-					<div class="col-8">
+					<div class="col-12 col-sm-6 col-md-7 col-lg-8">
 						<div class="main-author__item main-author_big">
 							<a class="main-author__link" href="<?=$arSection['SECTION_PAGE_URL']?>">
 								<img src="<?=makeWebp(($arSection['PICTURE']) ? $arSection['PICTURE'] : $arSection['DETAIL_PICTURE']);?>" alt="<?=$arSection['NAME']?>" class="w-100 h-100 main-author__img">
@@ -99,4 +99,7 @@ $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_
 
 		<?endif;?>
 	<?endforeach;?>
+	<div class="text-center mt-5">
+		<a href="/<?=$arResult["CODE"]?>/" class="button ask__btn mb-0"><?=GetMessage('AUTHORS_ALL');?></a>
+	</div>
 </div>

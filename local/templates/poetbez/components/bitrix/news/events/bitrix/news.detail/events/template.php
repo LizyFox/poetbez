@@ -26,7 +26,8 @@ $previous_date = strtotime(date('Y-m-d H:i:s', strtotime($arResult['ACTIVE_TO'])
 <div class="event-detail__block" itemscope itemtype="https://schema.org/Event">
 	<link itemprop="url" href="<?=$APPLICATION->GetCurPage();?>">
 	<meta itemprop="name" content="<?=$arResult['NAME'];?>">
-	<meta itemprop="startDate" content="<?= (new \Bitrix\Main\Type\DateTime($arResult["ACTIVE_TO"]))->format('d.m.Y');?>">
+	<meta itemprop="startDate" content="<?= $arResult["ACTIVE_FROM"];?>">
+	<meta itemprop="endDate" content="<?= $arResult["ACTIVE_TO"];?>">
 	<div class="container-lg">
 		<div class="row flex-column-reverse flex-md-row">
 			<div class="col-12 col-md-7 col-lg-6 mb-4 mb-md-0">

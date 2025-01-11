@@ -15,15 +15,13 @@
 	text-shadow: 0px 6px 6px rgba(24, 24, 24, 1);
 }
 .events__name {
-	/* font-family: 'Inter'; */
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
 	letter-spacing: -0.8px;
 }
 .events__date {
-	/* font-family: 'Inter'; */
 	letter-spacing: -0.8px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
 }
 

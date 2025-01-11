@@ -36,3 +36,9 @@ while ($section = $res->GetNext()) {
 shuffle($arResult['SECTIONS_NEW']);
 
 $arResult['SECTIONS_NEW'] = array_slice($arResult['SECTIONS_NEW'], 0, $sectionCount);
+
+$iblock = CIBlock::GetByID($iblockId);
+
+if ($arIBlock = $iblock->GetNext()) {
+    $arResult["CODE"] = $arIBlock["CODE"];
+}

@@ -18,7 +18,15 @@ img {
 .news-detail__gallery .owl-item, .news-another__items .owl-item {
 	display: flex;
 }
+.news-detail__gallery-item {
+	overflow: hidden;
+}
+.news-detail__gallery-item:hover img {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
 .news-detail__gallery-item img {
+	transition: transform 0.3s ease;
 	object-fit: cover;
 }
 .news-detail__gallery .owl-nav, .news-detail__gallery .owl-dots, .news-another__items .owl-nav, .news-another__items .owl-dots {

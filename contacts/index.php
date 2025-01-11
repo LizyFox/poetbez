@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("Контактная информация");
                 Array("MODE"=>"html")
             );?>
             <div class="contacts-feedback__block mt-4 mt-md-5 mb-4 mb-md-0 d-flex">
-                <p class="button btn_red d-inline-block btn-coop btn_blick mb-0">Задать вопрос</p>
+                <p class="button btn_red d-inline-block btn-coop btn_blick mb-0" data-bs-toggle="modal" data-bs-target="#ask-form" data-bs-whatever="ask-form">Задать вопрос</p>
 
                 <?$APPLICATION->IncludeFile(
                     SITE_DIR."include/telegram.php",

@@ -2,6 +2,9 @@
 @import url('fonts.css');
 @import url('bootstrap-custom.css');
 
+* {
+    box-sizing: border-box;
+}
 html {
     overflow-x: hidden;
 }
@@ -10,9 +13,16 @@ body {
     color: #fff;
     font-size: 18px;
     line-height: 130%;
+    background-color: var(--deep-black);
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 main {
-    /* min-height: 100vh; */
+    flex: 1;
 }
 a {
     color: #fff;

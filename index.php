@@ -167,7 +167,7 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 		</div>
 	</div>
 </div>
-<div class="main-agents__block mb-5">
+<div class="main-agents__block mb-5 pb-3">
 	<div class="container-lg">
 		<h2 class="h2">
 			<a href="/authors/" class="h2"><?=GetMessage("MAIN_H2_AUTHORS")?></a>
@@ -200,7 +200,7 @@ $APPLICATION->SetTitle("Культурное мероприятие нашего
 		);?>
 	</div>
 </div>
-<?/*<div class="main-merch__block">
+<?/*<div class="main-merch__block mb-5 pb-3">
 	<div class="container-lg">
 		<h2 class="h2">
 			<a href="/merch/" class="h2"><?=GetMessage("MAIN_H2_MERCH")?></a>

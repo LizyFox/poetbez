@@ -50,93 +50,94 @@ IncludeTemplateLangFile(__FILE__);
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>
-	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
+	<div class="wrapper">
+		<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-	<header itemscope itemtype="http://schema.org/WPHeader">
-		<meta itemprop="headline" content="<?$APPLICATION->ShowTitle()?>"> 
-		<meta itemprop="description" content="<?$APPLICATION->ShowProperty("description")?>">
+		<header itemscope itemtype="http://schema.org/WPHeader">
+			<meta itemprop="headline" content="<?$APPLICATION->ShowTitle()?>"> 
+			<meta itemprop="description" content="<?$APPLICATION->ShowProperty("description")?>">
 
-		<div class="header__block">
-			<div class="container-lg">
-				<div class="row">
-					<div class="col-6 col-md-1 col-lg-2">
-						<div class="logo__block w-100 h-100">
-							<?$APPLICATION->IncludeFile(
-								SITE_DIR."include/logo.php",
-								Array(),
-								Array("MODE"=>"html")
-							);?>
-						</div>
-					</div>
-					<div class="col-6 col-md-8 col-lg-7 order-3 order-md-2 d-flex d-md-block align-items-center justify-content-end">
-						<div class="d-md-none">
-							<div class="container-fluid justify-content-end">
-								<button data-mdb-button-init class="navbar-toggler toggler-button" type="button" data-mdb-collapse-init
-									data-mdb-target="#navbarToggleExternalContent10"
-									aria-controls="navbarToggleExternalContent10" aria-expanded="false"
-									aria-label="Toggle navigation">
-									<div class="animated-icon"><span></span><span></span><span></span><span></span></div>
-								</button>
-							</div>
-						</div>
-						<div class="top-menu__block d-md-block">
-							<?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
-								"ROOT_MENU_TYPE" => "top",
-								"MENU_CACHE_TYPE" => "Y",
-								"MENU_CACHE_TIME" => "36000000",
-								"MENU_CACHE_USE_GROUPS" => "Y",
-								"MENU_CACHE_GET_VARS" => array(
-								),
-								"MAX_LEVEL" => "1",
-								"CHILD_MENU_TYPE" => "left",
-								"USE_EXT" => "N",
-								"ALLOW_MULTI_SELECT" => "N"
-								),
-								false
-							);?>
-						</div>
-					</div>
-					<div class="col-3 order-2 order-md-3 d-none d-md-flex align-items-center justify-content-end">
-						<p class="button ask__btn mb-0"><?=GetMessage("HEADER_ASK")?></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="overhead"></div>
-		<?if ($APPLICATION->GetCurPage(false) != "/"):?>
-			<div class="breadcrumb__block">
+			<div class="header__block">
 				<div class="container-lg">
 					<div class="row">
-						<div class="col-12">
-								<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
-									"START_FROM" => "1",
-									"PATH" => "",
-									"SITE_ID" => SITE_ID
+						<div class="col-6 col-md-1 col-lg-2">
+							<div class="logo__block w-100 h-100">
+								<?$APPLICATION->IncludeFile(
+									SITE_DIR."include/logo.php",
+									Array(),
+									Array("MODE"=>"html")
+								);?>
+							</div>
+						</div>
+						<div class="col-6 col-md-8 col-lg-7 order-3 order-md-2 d-flex d-md-block align-items-center justify-content-end">
+							<div class="d-md-none">
+								<div class="container-fluid justify-content-end">
+									<button data-mdb-button-init class="navbar-toggler toggler-button" type="button" data-mdb-collapse-init
+										data-mdb-target="#navbarToggleExternalContent10"
+										aria-controls="navbarToggleExternalContent10" aria-expanded="false"
+										aria-label="Toggle navigation">
+										<div class="animated-icon"><span></span><span></span><span></span><span></span></div>
+									</button>
+								</div>
+							</div>
+							<div class="top-menu__block d-md-block">
+								<?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
+									"ROOT_MENU_TYPE" => "top",
+									"MENU_CACHE_TYPE" => "Y",
+									"MENU_CACHE_TIME" => "36000000",
+									"MENU_CACHE_USE_GROUPS" => "Y",
+									"MENU_CACHE_GET_VARS" => array(
+									),
+									"MAX_LEVEL" => "1",
+									"CHILD_MENU_TYPE" => "left",
+									"USE_EXT" => "N",
+									"ALLOW_MULTI_SELECT" => "N"
 									),
 									false
 								);?>
+							</div>
+						</div>
+						<div class="col-3 order-2 order-md-3 d-none d-md-flex align-items-center justify-content-end">
+							<p class="button ask__btn mb-0" data-bs-toggle="modal" data-bs-target="#ask-form" data-bs-whatever="ask-form"><?=GetMessage("HEADER_ASK")?></p>
 						</div>
 					</div>
 				</div>
 			</div>
-		<?endif;?>
-	</header>
-	<main>
+			<div class="overhead"></div>
+			<?if ($APPLICATION->GetCurPage(false) != "/"):?>
+				<div class="breadcrumb__block">
+					<div class="container-lg">
+						<div class="row">
+							<div class="col-12">
+									<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
+										"START_FROM" => "1",
+										"PATH" => "",
+										"SITE_ID" => SITE_ID
+										),
+										false
+									);?>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?endif;?>
+		</header>
+		<main>
 
 
-	<?/*
-	<?$APPLICATION->IncludeComponent("bitrix:menu", "tree", array(
-		"ROOT_MENU_TYPE" => "leftfirst",
-		"MENU_CACHE_TYPE" => "Y",
-		"MENU_CACHE_TIME" => "36000000",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MAX_LEVEL" => "4",
-		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "N",
-		"ALLOW_MULTI_SELECT" => "N"
-		),
-		false
-	);?>
-	*/?>
+		<?/*
+		<?$APPLICATION->IncludeComponent("bitrix:menu", "tree", array(
+			"ROOT_MENU_TYPE" => "leftfirst",
+			"MENU_CACHE_TYPE" => "Y",
+			"MENU_CACHE_TIME" => "36000000",
+			"MENU_CACHE_USE_GROUPS" => "Y",
+			"MENU_CACHE_GET_VARS" => array(
+			),
+			"MAX_LEVEL" => "4",
+			"CHILD_MENU_TYPE" => "left",
+			"USE_EXT" => "N",
+			"ALLOW_MULTI_SELECT" => "N"
+			),
+			false
+		);?>
+		*/?>

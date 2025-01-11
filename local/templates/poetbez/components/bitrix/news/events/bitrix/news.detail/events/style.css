@@ -24,6 +24,10 @@
 .event-detail__gallery .owl-item {
 	display: flex;
 }
+.event-detail__gallery-item {
+	transition: transform 0.3s ease;
+	overflow: hidden;
+}
 .event-detail__gallery-item img {
 	object-fit: cover;
 }
@@ -87,6 +91,10 @@
 	border-color: #620c00;
 	height: 12px;
 	width: 12px;
+}
+.event-detail__gallery-item:hover img {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
 }
 
 @media (max-width: 1199px) {
