@@ -72,10 +72,7 @@ IncludeTemplateLangFile(__FILE__);
 						<div class="col-6 col-md-8 col-lg-7 order-3 order-md-2 d-flex d-md-block align-items-center justify-content-end">
 							<div class="d-md-none">
 								<div class="container-fluid justify-content-end">
-									<button data-mdb-button-init class="navbar-toggler toggler-button" type="button" data-mdb-collapse-init
-										data-mdb-target="#navbarToggleExternalContent10"
-										aria-controls="navbarToggleExternalContent10" aria-expanded="false"
-										aria-label="Toggle navigation">
+									<button data-mdb-button-init class="navbar-toggler toggler-button" type="button" data-mdb-collapse-init data-mdb-target="#navbarToggleExternalContent10" aria-controls="navbarToggleExternalContent10" aria-expanded="false" aria-label="Toggle navigation">
 										<div class="animated-icon"><span></span><span></span><span></span><span></span></div>
 									</button>
 								</div>

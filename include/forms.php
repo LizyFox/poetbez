@@ -1,78 +1,55 @@
 <? /** Задать вопрос */ ?>
 
 <div class="form__question">
-    <div class="modal fade" id="ask-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ask-form" tabindex="-1" aria-labelledby="form__question" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                    <p class="modal-title h2 mb-0" id="form__question">Задать вопрос</p>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form class="row g-3">
-                        <div class="col-md-4">
-                            <label for="validationServer01" class="form-label">First name</label>
-                            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-                            <div class="valid-feedback">
-                            Looks good!
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="validationServer02" class="form-label">Last name</label>
-                            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                            <div class="valid-feedback">
-                            Looks good!
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="validationServerUsername" class="form-label">Username</label>
+                        <div class="col-12">
                             <div class="input-group has-validation">
-                            <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                            <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                            <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                                Please choose a username.
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="validationServer03" class="form-label">City</label>
-                            <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
-                            <div id="validationServer03Feedback" class="invalid-feedback">
-                            Please provide a valid city.
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="validationServer04" class="form-label">State</label>
-                            <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>...</option>
-                            </select>
-                            <div id="validationServer04Feedback" class="invalid-feedback">
-                            Please select a valid state.
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="validationServer05" class="form-label">Zip</label>
-                            <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
-                            <div id="validationServer05Feedback" class="invalid-feedback">
-                            Please provide a valid zip.
+                                <input type="text" class="form-control" id="ask-form_name" placeholder="Имя*">
+                                <div class="invalid-feedback">
+                                    Введите Ваше имя
+                                </div>
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="form-check">
-                            <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-                            <label class="form-check-label" for="invalidCheck3">
-                                Agree to terms and conditions
-                            </label>
-                            <div id="invalidCheck3Feedback" class="invalid-feedback">
-                                You must agree before submitting.
-                            </div>
+                            <input type="text" class="form-control" id="ask-form_surname" placeholder="Фамилия">
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="ask_email">@</span>
+                                <input type="email" class="form-control" id="ask-form_email" aria-describedby="ask_email" placeholder="mail@example.com*">
+                                <div class="invalid-feedback">
+                                    Введите Вашу почту для связи
+                                </div>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Submit form</button>
+                            <div class="input-group has-validation">
+                                <textarea class="form-control" id="ask-form_question" rows="3" placeholder="Ваш вопрос*"></textarea>
+                                <div class="invalid-feedback">
+                                    Задайте Ваш вопрос
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="necessery-check mb-2">* - обязательные поля</p>
+                            <p class="privacy-check">Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="/privacy/" target="_blank" class="text-decoration-underline">политикой конфиденциальности</a></p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn" type="submit">Отправить</button>
                         </div>
                     </form>
+                    <div class="form-success">
+                        <p class="h2 text-center">Благодарим за обращение!</p>
+                        <p class="text-center">Наши организаторы ответят в ближайшее время</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -38,5 +38,5 @@
 	);?>
 </div>
 <div class="mobile-ask__btn d-md-none">
-	<p class="button ask__btn text-center"><?=GetMessage("HEADER_ASK")?></p>
+	<p class="button ask__btn text-center" data-bs-toggle="modal" data-bs-target="#ask-form" data-bs-whatever="ask-form"><?=GetMessage("HEADER_ASK")?></p>
 </div>

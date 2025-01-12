@@ -12,6 +12,7 @@ $(document).ready(function () {
             max: 25,
         }
     }
+
     const randomBetween = (a, b) => {
         return (a + (Math.random() * (b - a)));
     }
@@ -36,24 +37,75 @@ $(document).ready(function () {
 
 /** Формы */
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+$(document).on('submit', '.form__question form', function(e) {
+    e.preventDefault();
+
+    let form = $(this).closest('form');
+    let div = $(this).closest('.modal-body');
+    let error = false;
+
+    if (form.find('#ask-form_name').val() == '') {
+        form.find('#ask-form_name').addClass('is-invalid');
+        form.find('#ask-form_name').closest('.has-validation').find('.invalid-feedback').css('display', 'block');
+        error = true;
+    } else {
+        form.find('#ask-form_name').removeClass('is-invalid');
+        form.find('#ask-form_name').addClass('is-valid');
+        form.find('#ask-form_name').closest('.has-validation').find('.invalid-feedback').css('display', 'none');
+    }
+
+    if (form.find('#ask-form_email').val() != '') {
+        let reg = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+        let valid = reg.test(form.find('#ask-form_email').val());
+
+        if (!valid) {
+            form.find('#ask-form_email').addClass('is-invalid');
+            form.find('#ask-form_email').closest('.has-validation').find('.invalid-feedback').css('display', 'block');
+            error = true;
+        } else {
+            form.find('#ask-form_email').removeClass('is-invalid');
+            form.find('#ask-form_email').addClass('is-valid');
+            form.find('#ask-form_email').closest('.has-validation').find('.invalid-feedback').css('display', 'none');
         }
-  
-        form.classList.add('was-validated')
-      }, false)
-    })
-})();
+    } else {
+        form.find('#ask-form_email').addClass('is-invalid');
+        form.find('#ask-form_email').closest('.has-validation').find('.invalid-feedback').css('display', 'block');
+    }
+
+    if (form.find('#ask-form_question').val() == '') {
+        form.find('#ask-form_question').addClass('is-invalid');
+        form.find('#ask-form_question').closest('.has-validation').find('.invalid-feedback').css('display', 'block');
+        error = true;
+    } else {
+        form.find('#ask-form_question').removeClass('is-invalid');
+        form.find('#ask-form_question').addClass('is-valid');
+        form.find('#ask-form_question').closest('.has-validation').find('.invalid-feedback').css('display', 'none');
+    }
+
+    if (!error) {
+        // let a = $(this).serialize();
+
+        // $.ajax({
+        //     url: '/local/templates/poetbez/ajax/feedback.php',
+        //     data: a,
+        //     type: 'POST',
+
+        //     success: function (data) {
+        //         function result() {
+        //             if (data == 'success') {
+                        $('.modal-title').hide();
+                        div.find('form').hide();
+                        div.find('.form-success').show();
+        //             } else {
+        //                 div.find('form').hide();
+        //                 div.find('.order-block-fail').addClass('active');
+        //             }
+        //         }
+
+        //         setTimeout(result, 1200);
+        //     },
+        // });
+    }
+});
 
 /** Формы */
