@@ -3,7 +3,7 @@ return 12;
 // return $_POST['first_name'];
 
 
-define('SMARTCAPTCHA_SERVER_KEY', 'ysc2_3bDdFJNPyUKRkFg4xSwOktE64oys2TyeSGMqyXAue1de8d6e');
+// define('SMARTCAPTCHA_SERVER_KEY', 'ysc2_3bDdFJNPyUKRkFg4xSwOktE64oys2TyeSGMqyXAue1de8d6e');
 
 // function check_captcha($token) {
 //     $url = "https://smartcaptcha.yandexcloud.net/validate";
