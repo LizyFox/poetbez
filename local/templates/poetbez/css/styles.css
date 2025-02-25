@@ -347,7 +347,10 @@ footer {
 }
 .all-forms .modal.fade.show {
     z-index: 99999;
-    padding-right: 0;
+    padding-right: 0 !important;
+}
+body.modal-open {
+    padding-right: 0 !important;
 }
 .all-forms .modal-content {
     background-color: var(--light-black);
