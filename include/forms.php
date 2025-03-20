@@ -41,7 +41,6 @@
                             <p class="necessery-check mb-2">* - обязательные поля</p>
                             <p class="privacy-check">Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="/privacy/" target="_blank" class="text-decoration-underline">политикой конфиденциальности</a></p>
                         </div>
-                        <div id="captcha-container"></div>
                         <div class="col-12 text-center">
                             <button class="btn" type="submit">Отправить</button>
                         </div>

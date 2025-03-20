@@ -36,36 +36,6 @@ $(document).ready(function () {
 });
 
 /** Формы */
-let widgetId;
-
-function onloadFunction() {
-    if (!window.smartCaptcha) {
-        return;
-    }
-
-    widgetId = window.smartCaptcha.render('captcha-container', {
-        sitekey: 'ysc1_3bDdFJNPyUKRkFg4xSwOxMYP6TPdU00Of4Dpfh1P2f6e5426',
-        invisible: true, // Сделать капчу невидимой
-        callback: callback,
-    });
-}
-
-function callback(token) {
-    if (typeof token === "string" && token.length > 0) {
-        // Отправить форму на бекенд
-        console.log(token);
-    }
-}
-
-function handleSubmit() {
-    if (!window.smartCaptcha) {
-        return;
-    }
-
-    window.smartCaptcha.execute(widgetId);
-}
-
-
 $(document).on('submit', '.form__question form', function(e) {
     e.preventDefault();
 
@@ -114,29 +84,26 @@ $(document).on('submit', '.form__question form', function(e) {
     }
 
     if (!error) {
-        $.ajax({
+        /*$.ajax({
             url: '/local/templates/poetbez/ajax/forms.php',
             data: $(this).serialize(),
             type: 'POST',
 
-            success: function (data) {
-                console.log(data);
-                // function result() {
-                //     if (data == 'success') {
-                //         $('.modal-title').hide();
-                //         div.find('form').hide();
-                //         div.find('.form-success').show();
-                //     } else {
-                //         div.find('form').hide();
-                //         div.find('.order-block-fail').addClass('active');
-                //     }
-                // }
+            success: function (data) {*/
+                function result() {
+                    if (data == 'success') {
+                        $('.modal-title').hide();
+                        div.find('form').hide();
+                        div.find('.form-success').show();
+                    } else {
+                        div.find('form').hide();
+                        div.find('.order-block-fail').addClass('active');
+                    }
+                }
 
-                // setTimeout(result, 300);
-            }, error: function() {
-                console.log('Что-то вышло не так!');
-            }
-        });
+                setTimeout(result, 300);
+            /*}
+        });*/
     }
 });
 /** Формы */
